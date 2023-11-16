@@ -14,6 +14,7 @@ create table User(
     primary key(user_id)
 );
 
+select * from user;
 create table Article(
 	article_id int auto_increment,
     like_num int,
@@ -44,7 +45,7 @@ create table Profile(
     info varchar(512),
     user_id varchar(20),
     img_url text,
-    primary key(nickname, user_id),
+    primary key(user_id),
     foreign key(user_id) references User(user_id)on delete cascade
 );
 
