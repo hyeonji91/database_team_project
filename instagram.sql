@@ -16,12 +16,20 @@ create table User(
 
 create table Article(
 	article_id int auto_increment,
-    like_num int,
     context varchar(512),
     created_at datetime(6),
     user_id varchar(20),
     primary key(article_id),
     foreign key(user_id) references User(user_id) on delete cascade
+);
+
+create table Likes (
+    like_id int auto_increment,
+    user_id varchar(20),
+    article_id int,
+    primary key(like_id),
+    foreign key(user_id) references User(user_id),
+    foreign key(article_id) references Article(article_id) on delete cascade
 );
 
 create table Comment(
@@ -42,7 +50,7 @@ create table Profile(
     info varchar(512),
     user_id varchar(20),
     img_url text,
-    primary key(nickname, user_id),
+    primary key(user_id),
     foreign key(user_id) references User(user_id)on delete cascade
 );
 
