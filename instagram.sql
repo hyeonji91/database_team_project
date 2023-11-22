@@ -14,6 +14,7 @@ create table User(
     primary key(user_id)
 );
 
+select * from user;
 create table Article(
 	article_id int auto_increment,
     context varchar(512),
@@ -34,10 +35,12 @@ create table Likes (
 
 create table Comment(
 	comment_id int auto_increment,
-    created_at datetime,
+    created_at datetime(6),
     context varchar(512),
     user_id varchar(20),
     article_id int,
+    comment_grp int,
+    hierarchy int,
     primary key(comment_id),
     foreign key(user_id) references User(user_id) on delete cascade, 
     foreign key(article_id) references Article(article_id) on delete cascade
