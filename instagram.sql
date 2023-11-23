@@ -1,4 +1,4 @@
-drop database instagram;
+ㄴdrop database instagram;
 
 create database instagram;
 use instagram;
@@ -18,7 +18,6 @@ create table User(
 
 create table Article(
     article_id int auto_increment,
-    like_num int,
     context varchar(512),
     created_at datetime(6),
     user_id varchar(20),
@@ -64,6 +63,15 @@ create table Follow(
     primary key(following_id, follower_id),
     foreign key(following_id) references User(user_id) on delete cascade,
     foreign key(follower_id) references User(user_id) on delete cascade
+);
+
+create table Likes (
+    like_id int auto_increment,
+    user_id varchar(20),
+    article_id int,
+    primary key(like_id),
+    foreign key(user_id) references User(user_id),
+    foreign key(article_id) references Article(article_id) on delete cascade
 );
 
 insert into Article values
@@ -202,6 +210,7 @@ insert into Comment values
 
 insert into Follow values
 ("tkesterton0","pfallowsi"),
+("tkesterton0","kohoolahan1"),
 ("kohoolahan1","prenhardj"),
 ("dbohey2","tkesterton0"),
 ("mstannah3","kohoolahan1"),
@@ -337,3 +346,17 @@ insert into User values
 ("prenhardj","Perice","jT1@{+ZG","2023-04-14","Male","403-154-6834","47 Onsgard Trail");
 
 
+SELECT a.article_id, a.context, COUNT(DISTINCT l.like_id) AS like_count, 
+COUNT(DISTINCT c.comment_id) AS comment_count
+FROM Article AS a
+LEFT JOIN Likes AS l ON a.article_id = l.article_id
+LEFT JOIN Comment AS c ON a.article_id = c.article_id
+WHERE a.user_id = 'tkesterton0'
+GROUP BY a.article_id;
+
+
+
+SELECT c.comment_id, c.context, r.reply_id
+FROM Comment AS c
+LEFT JOIN Reply AS r ON c.comment_id = r.comment_id
+WHERE c.article_id = 43;
