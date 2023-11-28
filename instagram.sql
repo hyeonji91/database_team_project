@@ -181,70 +181,73 @@ INSERT INTO article(like_num,context,created_at,user_id) VALUES (43,'ornare impe
 INSERT INTO article(like_num,context,created_at,user_id) VALUES (70,'congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec','2023-03-03 1:00','pfallowsi');
 INSERT INTO article(like_num,context,created_at,user_id) VALUES (8,'leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede','2023-06-04 3:59','prenhardj');
 
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin',1,1,'alossmana',10,'10:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('est phasellus sit amet erat nulla tempus vivamus in felis eu',1,1,'tkesterton0',43,'59:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat',2,1,'rsuddock6',7,'24:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed',5,2,'zdillistone4',79,'13:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum',2,2,'kohoolahan1',92,'40:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet',5,2,'prenhardj',32,'40:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec',3,1,'hantonsen7',72,'19:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut',3,2,'dbohey2',38,'54:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio',5,1,'zdillistone4',82,'17:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac',5,2,'pyork9',61,'28:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl',4,2,'pfallowsi',63,'51:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam',4,2,'hbladge8',28,'56:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis',1,1,'arealf',50,'04:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('ullamcorper augue a suscipit nulla elit ac nulla sed vel',5,2,'mhallgalleye',88,'35:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna',5,2,'pyork9',75,'22:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem',3,2,'hantonsen7',51,'35:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper',4,2,'mstannah3',67,'25:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('faucibus cursus urna ut tellus nulla ut erat id mauris',3,2,'hantonsen7',79,'34:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque',1,1,'alossmana',53,'11:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum',2,1,'bswinleyg',67,'03:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum',2,2,'rsuddock6',3,'53:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros',1,2,'arealf',37,'02:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu',4,2,'hbladge8',59,'02:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante',1,2,'arealf',73,'25:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque',5,1,'zdillistone4',96,'21:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('sem praesent id massa id nisl venenatis lacinia aenean sit',4,2,'mstannah3',76,'34:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in',4,1,'dspreadd',69,'25:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus',1,1,'dgillison5',33,'37:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla',5,1,'mhallgalleye',7,'30:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus',1,1,'arealf',62,'20:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nunc rhoncus dui vel sem sed sagittis nam congue risus semper',4,2,'hbladge8',36,'48:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at',2,2,'rsuddock6',90,'33:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('tortor risus dapibus augue vel accumsan tellus nisi eu orci',5,2,'mhallgalleye',31,'37:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lacinia erat vestibulum sed magna at nunc commodo placerat praesent',5,1,'pyork9',21,'55:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('proin at turpis a pede posuere nonummy integer non velit',4,1,'mstannah3',12,'45:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('sed vel enim sit amet nunc viverra dapibus nulla suscipit',4,1,'hbladge8',27,'06:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu',5,1,'prenhardj',4,'16:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit',2,2,'bswinleyg',13,'10:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt',5,1,'prenhardj',52,'37:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla',2,2,'bswinleyg',76,'11:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi',3,2,'hantonsen7',36,'14:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus',4,2,'dspreadd',83,'05:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices',2,1,'kohoolahan1',94,'41:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede',1,1,'dgillison5',30,'32:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat',2,1,'blerouxb',37,'57:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque',2,2,'kohoolahan1',60,'32:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('quisque arcu libero rutrum ac lobortis vel dapibus at diam nam',3,1,'wferrarelloc',87,'21:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('rhoncus sed vestibulum sit amet cursus id turpis integer aliquet',3,1,'ochettleh',52,'17:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum',3,1,'dbohey2',52,'23:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('congue risus semper porta volutpat quam pede lobortis ligula sit',1,2,'alossmana',13,'39:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget',3,2,'wferrarelloc',90,'21:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus',3,1,'ochettleh',3,'15:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae',1,2,'alossmana',40,'36:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('id ornare imperdiet sapien urna pretium nisl ut volutpat sapien',1,2,'dgillison5',23,'16:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum',2,1,'blerouxb',12,'52:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat',5,1,'pyork9',59,'44:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt',2,2,'rsuddock6',26,'20:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo',5,1,'mhallgalleye',98,'40:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('tellus in sagittis dui vel nisl duis ac nibh fusce',1,2,'dgillison5',78,'34:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim',3,2,'ochettleh',100,'15:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante',3,1,'wferrarelloc',22,'07:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing',4,1,'dspreadd',88,'09:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('a odio in hac habitasse platea dictumst maecenas ut massa',4,2,'mstannah3',96,'01:00.0');
-INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien',2,1,'kohoolahan1',60,'13:00.0');
+
+
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin',1,1,'alossmana',10,'2023-04-04 16:59');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('est phasellus sit amet erat nulla tempus vivamus in felis eu',1,1,'tkesterton0',43,'2023-01-20 23:41');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat',2,1,'rsuddock6',7,'2023-03-14 23:23');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed',5,2,'zdillistone4',79,'2023-04-18 23:45');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum',2,2,'kohoolahan1',92,'2023-07-23 5:21');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet',5,2,'prenhardj',32,'2023-04-12 9:37');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec',3,1,'hantonsen7',72,'2023-04-25 21:24');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut',3,2,'dbohey2',38,'2023-09-09 21:19');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio',5,1,'zdillistone4',82,'2023-05-30 12:06');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac',5,2,'pyork9',61,'2023-08-15 6:55');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl',4,2,'pfallowsi',63,'2023-03-26 9:11');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam',4,2,'hbladge8',28,'2023-07-04 14:52');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis',1,1,'arealf',50,'2023-05-26 2:07');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('ullamcorper augue a suscipit nulla elit ac nulla sed vel',5,2,'mhallgalleye',88,'2023-10-22 12:09');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna',5,2,'pyork9',75,'2023-02-14 16:30');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem',3,2,'hantonsen7',51,'2023-05-25 18:20');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper',4,2,'mstannah3',67,'2023-09-08 1:03');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('faucibus cursus urna ut tellus nulla ut erat id mauris',3,2,'hantonsen7',79,'2023-04-03 3:12');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque',1,1,'alossmana',53,'2023-08-30 17:40');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum',2,1,'bswinleyg',67,'2022-12-22 5:16');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum',2,2,'rsuddock6',3,'2023-09-19 3:07');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros',1,2,'arealf',37,'2023-06-22 21:13');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu',4,2,'hbladge8',59,'2023-04-14 20:01');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante',1,2,'arealf',73,'2023-10-27 23:32');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque',5,1,'zdillistone4',96,'2023-11-02 16:41');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('sem praesent id massa id nisl venenatis lacinia aenean sit',4,2,'mstannah3',76,'2023-03-09 10:16');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in',4,1,'dspreadd',69,'2023-10-07 2:20');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus',1,1,'dgillison5',33,'2023-01-27 4:35');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla',5,1,'mhallgalleye',7,'2023-05-07 20:56');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus',1,1,'arealf',62,'2023-06-01 7:22');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nunc rhoncus dui vel sem sed sagittis nam congue risus semper',4,2,'hbladge8',36,'2023-06-08 2:36');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at',2,2,'rsuddock6',90,'2022-12-10 23:09');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('tortor risus dapibus augue vel accumsan tellus nisi eu orci',5,2,'mhallgalleye',31,'2023-05-01 13:21');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lacinia erat vestibulum sed magna at nunc commodo placerat praesent',5,1,'pyork9',21,'2022-12-22 4:05');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('proin at turpis a pede posuere nonummy integer non velit',4,1,'mstannah3',12,'2023-10-27 11:35');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('sed vel enim sit amet nunc viverra dapibus nulla suscipit',4,1,'hbladge8',27,'2023-09-28 12:02');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu',5,1,'prenhardj',4,'2023-02-03 21:11');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit',2,2,'bswinleyg',13,'2023-01-23 0:15');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt',5,1,'prenhardj',52,'2023-07-26 1:49');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla',2,2,'bswinleyg',76,'2023-03-13 2:54');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi',3,2,'hantonsen7',36,'2023-02-19 12:27');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus',4,2,'dspreadd',83,'2022-11-20 1:57');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices',2,1,'kohoolahan1',94,'2023-06-02 18:29');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede',1,1,'dgillison5',30,'2023-03-14 22:01');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat',2,1,'blerouxb',37,'2023-02-09 12:13');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque',2,2,'kohoolahan1',60,'2023-02-22 10:34');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('quisque arcu libero rutrum ac lobortis vel dapibus at diam nam',3,1,'wferrarelloc',87,'2023-03-01 7:53');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('rhoncus sed vestibulum sit amet cursus id turpis integer aliquet',3,1,'ochettleh',52,'2023-09-13 15:14');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum',3,1,'dbohey2',52,'2023-08-14 11:48');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('congue risus semper porta volutpat quam pede lobortis ligula sit',1,2,'alossmana',13,'2023-06-25 22:28');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget',3,2,'wferrarelloc',90,'2023-08-13 5:15');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus',3,1,'ochettleh',3,'2023-05-20 13:50');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae',1,2,'alossmana',40,'2023-08-11 17:43');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('id ornare imperdiet sapien urna pretium nisl ut volutpat sapien',1,2,'dgillison5',23,'2022-11-24 16:59');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum',2,1,'blerouxb',12,'2023-09-04 22:37');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat',5,1,'pyork9',59,'2023-04-01 17:25');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt',2,2,'rsuddock6',26,'2023-02-10 11:10');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo',5,1,'mhallgalleye',98,'2022-12-30 10:10');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('tellus in sagittis dui vel nisl duis ac nibh fusce',1,2,'dgillison5',78,'2023-08-08 4:51');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim',3,2,'ochettleh',100,'2022-11-30 11:40');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante',3,1,'wferrarelloc',22,'2022-12-11 18:44');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing',4,1,'dspreadd',88,'2023-06-04 15:32');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('a odio in hac habitasse platea dictumst maecenas ut massa',4,2,'mstannah3',96,'2022-12-14 3:54');
+INSERT INTO comment(context,group_num,hierarchy,user_id,article_id,created_at) VALUES ('pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien',2,1,'kohoolahan1',60,'2023-05-04 22:25');
+
 
 
 insert into Follow values
@@ -271,106 +274,109 @@ insert into Follow values
 ("prenhardj","ochettleh");
 
 
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/228x100.png/5fa2dd/ffffff',43);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/126x100.png/5fa2dd/ffffff',94);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/103x100.png/cc0000/ffffff',52);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/114x100.png/cc0000/ffffff',12);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/140x100.png/cc0000/ffffff',96);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/209x100.png/ff4444/ffffff',33);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/246x100.png/ff4444/ffffff',7);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/105x100.png/5fa2dd/ffffff',72);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/138x100.png/5fa2dd/ffffff',27);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/106x100.png/dddddd/000000',21);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/106x100.png/dddddd/000000',53);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/248x100.png/5fa2dd/ffffff',12);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/109x100.png/5fa2dd/ffffff',22);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/101x100.png/5fa2dd/ffffff',88);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/217x100.png/dddddd/000000',7);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/238x100.png/5fa2dd/ffffff',62);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/150x100.png/5fa2dd/ffffff',67);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/236x100.png/5fa2dd/ffffff',51);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/245x100.png/5fa2dd/ffffff',34);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/218x100.png/5fa2dd/ffffff',4);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/175x100.png/5fa2dd/ffffff',98);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/250x100.png/dddddd/000000',60);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/232x100.png/5fa2dd/ffffff',83);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/204x100.png/ff4444/ffffff',76);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/187x100.png/5fa2dd/ffffff',13);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/155x100.png/ff4444/ffffff',23);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/175x100.png/ff4444/ffffff',26);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/193x100.png/cc0000/ffffff',51);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/133x100.png/cc0000/ffffff',28);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/129x100.png/cc0000/ffffff',75);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/215x100.png/dddddd/000000',40);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/137x100.png/cc0000/ffffff',23);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/177x100.png/dddddd/000000',90);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/190x100.png/cc0000/ffffff',83);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/118x100.png/ff4444/ffffff',88);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/143x100.png/ff4444/ffffff',37);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/144x100.png/5fa2dd/ffffff',76);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/119x100.png/5fa2dd/ffffff',100);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/208x100.png/dddddd/000000',44);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/146x100.png/dddddd/000000',65);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/138x100.png/5fa2dd/ffffff',8);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/145x100.png/5fa2dd/ffffff',2);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/180x100.png/ff4444/ffffff',1);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/124x100.png/dddddd/000000',96);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/111x100.png/cc0000/ffffff',79);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/165x100.png/dddddd/000000',78);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/227x100.png/cc0000/ffffff',3);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/176x100.png/5fa2dd/ffffff',36);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/128x100.png/ff4444/ffffff',36);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/223x100.png/dddddd/000000',61);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/151x100.png/ff4444/ffffff',21);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/218x100.png/cc0000/ffffff',92);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/133x100.png/5fa2dd/ffffff',72);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/233x100.png/ff4444/ffffff',32);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/141x100.png/5fa2dd/ffffff',31);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/249x100.png/5fa2dd/ffffff',73);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/216x100.png/dddddd/000000',13);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/113x100.png/ff4444/ffffff',13);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/201x100.png/dddddd/000000',63);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/109x100.png/ff4444/ffffff',32);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/208x100.png/ff4444/ffffff',33);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/118x100.png/cc0000/ffffff',60);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/155x100.png/cc0000/ffffff',38);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/161x100.png/cc0000/ffffff',67);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/194x100.png/5fa2dd/ffffff',82);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/101x100.png/cc0000/ffffff',30);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/198x100.png/dddddd/000000',74);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/198x100.png/cc0000/ffffff',75);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/108x100.png/dddddd/000000',99);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/232x100.png/5fa2dd/ffffff',59);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/129x100.png/cc0000/ffffff',10);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/227x100.png/cc0000/ffffff',37);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/219x100.png/dddddd/000000',87);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/189x100.png/5fa2dd/ffffff',69);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/103x100.png/dddddd/000000',21);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/178x100.png/dddddd/000000',50);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/184x100.png/5fa2dd/ffffff',58);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/131x100.png/cc0000/ffffff',3);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/162x100.png/cc0000/ffffff',82);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/126x100.png/dddddd/000000',52);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/163x100.png/cc0000/ffffff',66);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/176x100.png/cc0000/ffffff',92);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/102x100.png/ff4444/ffffff',43);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/152x100.png/dddddd/000000',76);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/249x100.png/cc0000/ffffff',91);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/165x100.png/5fa2dd/ffffff',55);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/153x100.png/ff4444/ffffff',90);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/129x100.png/cc0000/ffffff',79);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/247x100.png/cc0000/ffffff',59);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/135x100.png/ff4444/ffffff',54);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/171x100.png/dddddd/000000',13);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/171x100.png/ff4444/ffffff',16);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/175x100.png/dddddd/000000',3);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/140x100.png/ff4444/ffffff',57);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/179x100.png/ff4444/ffffff',98);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/111x100.png/ff4444/ffffff',8);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/248x100.png/cc0000/ffffff',47);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/241x100.png/ff4444/ffffff',52);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/172x100.png/5fa2dd/ffffff',35);
-INSERT INTO img(URL,article_id) VALUES ('http://dummyimage.com/139x100.png/cc0000/ffffff',30);
+
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/228x100.png/5fa2dd/ffffff',43);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/126x100.png/5fa2dd/ffffff',94);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/103x100.png/cc0000/ffffff',52);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/114x100.png/cc0000/ffffff',12);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/140x100.png/cc0000/ffffff',96);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/209x100.png/ff4444/ffffff',33);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/246x100.png/ff4444/ffffff',7);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/105x100.png/5fa2dd/ffffff',72);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/138x100.png/5fa2dd/ffffff',27);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/106x100.png/dddddd/000000',21);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/106x100.png/dddddd/000000',53);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/248x100.png/5fa2dd/ffffff',12);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/109x100.png/5fa2dd/ffffff',22);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/101x100.png/5fa2dd/ffffff',88);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/217x100.png/dddddd/000000',7);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/238x100.png/5fa2dd/ffffff',62);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/150x100.png/5fa2dd/ffffff',67);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/236x100.png/5fa2dd/ffffff',51);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/245x100.png/5fa2dd/ffffff',34);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/218x100.png/5fa2dd/ffffff',4);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/175x100.png/5fa2dd/ffffff',98);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/250x100.png/dddddd/000000',60);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/232x100.png/5fa2dd/ffffff',83);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/204x100.png/ff4444/ffffff',76);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/187x100.png/5fa2dd/ffffff',13);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/155x100.png/ff4444/ffffff',23);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/175x100.png/ff4444/ffffff',26);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/193x100.png/cc0000/ffffff',51);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/133x100.png/cc0000/ffffff',28);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/129x100.png/cc0000/ffffff',75);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/215x100.png/dddddd/000000',40);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/137x100.png/cc0000/ffffff',23);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/177x100.png/dddddd/000000',90);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/190x100.png/cc0000/ffffff',83);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/118x100.png/ff4444/ffffff',88);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/143x100.png/ff4444/ffffff',37);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/144x100.png/5fa2dd/ffffff',76);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/119x100.png/5fa2dd/ffffff',100);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/208x100.png/dddddd/000000',44);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/146x100.png/dddddd/000000',65);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/138x100.png/5fa2dd/ffffff',8);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/145x100.png/5fa2dd/ffffff',2);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/180x100.png/ff4444/ffffff',1);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/124x100.png/dddddd/000000',96);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/111x100.png/cc0000/ffffff',79);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/165x100.png/dddddd/000000',78);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/227x100.png/cc0000/ffffff',3);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/176x100.png/5fa2dd/ffffff',36);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/128x100.png/ff4444/ffffff',36);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/223x100.png/dddddd/000000',61);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/151x100.png/ff4444/ffffff',21);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/218x100.png/cc0000/ffffff',92);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/133x100.png/5fa2dd/ffffff',72);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/233x100.png/ff4444/ffffff',32);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/141x100.png/5fa2dd/ffffff',31);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/249x100.png/5fa2dd/ffffff',73);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/216x100.png/dddddd/000000',13);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/113x100.png/ff4444/ffffff',13);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/201x100.png/dddddd/000000',63);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/109x100.png/ff4444/ffffff',32);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/208x100.png/ff4444/ffffff',33);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/118x100.png/cc0000/ffffff',60);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/155x100.png/cc0000/ffffff',38);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/161x100.png/cc0000/ffffff',67);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/194x100.png/5fa2dd/ffffff',82);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/101x100.png/cc0000/ffffff',30);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/198x100.png/dddddd/000000',74);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/198x100.png/cc0000/ffffff',75);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/108x100.png/dddddd/000000',99);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/232x100.png/5fa2dd/ffffff',59);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/129x100.png/cc0000/ffffff',10);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/227x100.png/cc0000/ffffff',37);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/219x100.png/dddddd/000000',87);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/189x100.png/5fa2dd/ffffff',69);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/103x100.png/dddddd/000000',21);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/178x100.png/dddddd/000000',50);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/184x100.png/5fa2dd/ffffff',58);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/131x100.png/cc0000/ffffff',3);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/162x100.png/cc0000/ffffff',82);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/126x100.png/dddddd/000000',52);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/163x100.png/cc0000/ffffff',66);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/176x100.png/cc0000/ffffff',92);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/102x100.png/ff4444/ffffff',43);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/152x100.png/dddddd/000000',76);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/249x100.png/cc0000/ffffff',91);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/165x100.png/5fa2dd/ffffff',55);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/153x100.png/ff4444/ffffff',90);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/129x100.png/cc0000/ffffff',79);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/247x100.png/cc0000/ffffff',59);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/135x100.png/ff4444/ffffff',54);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/171x100.png/dddddd/000000',13);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/171x100.png/ff4444/ffffff',16);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/175x100.png/dddddd/000000',3);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/140x100.png/ff4444/ffffff',57);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/179x100.png/ff4444/ffffff',98);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/111x100.png/ff4444/ffffff',8);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/248x100.png/cc0000/ffffff',47);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/241x100.png/ff4444/ffffff',52);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/172x100.png/5fa2dd/ffffff',35);
+INSERT INTO image(URL,article_id) VALUES ('http://dummyimage.com/139x100.png/cc0000/ffffff',30);
+
+
 
 insert into Profile values
 ("pfranzewitch0",85,67,"ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae","tkesterton0","http://dummyimage.com/228x100.png/5fa2dd/ffffff"),
@@ -520,12 +526,12 @@ INSERT INTO likes(user_id,article_id) VALUES ('pfallowsi',7);
 INSERT INTO likes(user_id,article_id) VALUES ('prenhardj',2);
 
 
-#특정 사용자의 모든 게시물과 댓글 수 가져오기 :
+#'tkesterton0' 사용자의 모든 게시물과 댓글 수 가져오기 :
 SELECT a.article_id, a.context, COUNT(DISTINCT l.like_id) AS like_count, COUNT(DISTINCT c.comment_id) AS comment_count
 FROM Article AS a
 LEFT JOIN Likes AS l ON a.article_id = l.article_id
 LEFT JOIN Comment AS c ON a.article_id = c.article_id
-WHERE a.user_id = '[특정 사용자 ID]'
+WHERE a.user_id = 'tkesterton0'
 GROUP BY a.article_id;
 
 # 특정 게시물에 대한 모든 댓글 및 댓글에 대한 답글 가져오기: (수정완)
@@ -562,33 +568,27 @@ LEFT JOIN Likes AS l ON a.article_id = l.article_id
 WHERE u.user_id = '[특정 사용자 ID]' AND a.article_id = '[특정 게시글 ID]'
 GROUP BY a.article_id;
 
-#프로필에서 게시글의 이미지를 선택하여 해당 게시글로 이동하는 기능 (오류 발생)
-SELECT a.article_id, i.URL AS image_url, a.context, COUNT(l.like_id) AS like_count, a.created_at
-FROM Profile AS p
-JOIN Article AS a ON p.user_id = a.user_id
-LEFT JOIN Image AS i ON a.article_id = i.article_id
-LEFT JOIN Likes AS l ON a.article_id = l.article_id
-WHERE p.nickname = '[특정 사용자 닉네임]'
-GROUP BY a.article_id; 
 
-SELECT 
-    a.article_id, 
-    MIN(i.URL) AS image_url,  -- 집계 함수를 사용하여 하나의 URL 값을 선택
-    a.context, 
-    COUNT(l.like_id) AS like_count, 
-    a.created_at
-FROM 
-    Profile AS p
-JOIN 
-    Article AS a ON p.user_id = a.user_id
-LEFT JOIN 
-    Image AS i ON a.article_id = i.article_id
-LEFT JOIN 
-    Likes AS l ON a.article_id = l.article_id
-WHERE 
-    p.nickname = '[특정 사용자 닉네임]'
-GROUP BY 
-    a.article_id;
+#프로필에서 게시글의 이미지를 선택하여 해당 게시글로 이동하는 기능 (article_id, like_num, context, user_id, created_at, 댓글 개수, 이미지)
+select a.article_id, a.like_num, a.context, a.user_id, a.created_at, comment_count, imgUrlList
+from article as a left join 
+(select article_id, count(comment_id) as comment_count from comment group by (article_id)) as c 
+on a.article_id = c.article_id
+left join (select article_id, group_concat(url) as imgUrlList from image as i group by (i.article_id)) as img
+on a.article_id = img.article_id 
+where a.article_id = 3;
+    
+    
+#'tkesterton0'가 팔로잉하는 사용자의 게시물 (article_id, like_num, context, created_at, user_id, comment_count )
+select a.article_id, a.like_num, a.context, a.created_at, a.user_id, comment_count, imgUrlList
+from article as a left join 
+(select user_id, count(comment_id) as comment_count from comment group by(user_id))as c
+on a.user_id = c.user_id
+left join (select article_id, group_concat(url) as imgUrlList from image as i group by (i.article_id)) as img
+on a.article_id = img.article_id 
+ where a.user_id in (select following_id from follow where follower_id = 'tkesterton0');
+
+
 
 #좋아요 추가
 INSERT INTO Likes (user_id, article_id) VALUES ('[사용자 ID]', '[게시물 ID]');
@@ -610,7 +610,7 @@ DELETE FROM Article WHERE article_id = '[게시물 ID]' AND user_id = '[사용�
 
 
 #게시물의 총 좋아요 수 조회 #이건 게시글 조회에 같이 들어가있어서 필요없을듯
-SELECT COUNT(*) AS like_count FROM Likes WHERE article_id = [게시물 ID];
+SELECT COUNT(*) AS like_count FROM Likes WHERE article_id = '[게시물 ID]';
 
 
 #사용자 프로필 업데이트
@@ -657,14 +657,6 @@ BEGIN
    WHERE user_id = OLD.following_id AND follower > 0;
 END;
 
-#'tkesterton0' 사용자가 작성한 모든 게시물에 대한 정보 제시
-SELECT a.article_id, a.context, COUNT(DISTINCT l.like_id) AS like_count, 
-COUNT(DISTINCT c.comment_id) AS comment_count
-FROM Article AS a
-LEFT JOIN Likes AS l ON a.article_id = l.article_id
-LEFT JOIN Comment AS c ON a.article_id = c.article_id
-WHERE a.user_id = 'tkesterton0'
-GROUP BY a.article_id;
 
 
 
