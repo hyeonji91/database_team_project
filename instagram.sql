@@ -618,6 +618,8 @@ UPDATE Profile
 SET nickname = '[새 닉네임]', info = '[새 정보]', img_url = '[새 이미지 URL]'
 WHERE user_id = '[사용자 ID]';
 
+
+
 #팔로잉, 팔로워 업데이트
 CREATE TRIGGER update_follower_count
 AFTER INSERT ON Follow
