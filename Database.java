@@ -79,12 +79,11 @@ public class Database {
 
     /*팔로잉 정보를 확인*/
     ArrayList<String> following = new ArrayList<String>();
-    boolean followchcek() {
+    boolean followchcek(String _ui) {
         boolean flag = false;
 
-        //o.mf 부분은 프레임에서 넘겨받은 변수명으로 수정해야됨.
         try {
-            String outputStrfollow = "SELECT * FROM Follow where following_id = '" + o.mf.user_id + "'";
+            String outputStrfollow = "SELECT * FROM Follow where following_id = '" + _ui + "'";
             rs = stmt.executeQuery(outputStrfollow);
             while (rs.next()) {
                 following.add(rs.getString("follower_id"));
@@ -105,12 +104,12 @@ public class Database {
     
     /*팔로워 정보 확인*/
     ArrayList<String> follower = new ArrayList<String>();
-    boolean followedchcek() {
+    boolean followedchcek(String _ui) {
         boolean flag = false;
 
 
         try {
-            String outputStrfollow = "SELECT * FROM Follow where follower_id = '" + o.mf.user_id + "'";
+            String outputStrfollow = "SELECT * FROM Follow where follower_id = '" + _ui + "'";
             rs = stmt.executeQuery(outputStrfollow);
             while (rs.next()) {
                 follower.add(rs.getString("following_id"));
@@ -133,7 +132,6 @@ public class Database {
     ArrayList<String> stid = new ArrayList<String>();
     boolean setid() {
         boolean flag = false;
-
 
         try {
             String outputStrfollow = "SELECT * FROM User ";
@@ -174,14 +172,14 @@ public class Database {
     }
     
     /*팔로우 추가*/
-    boolean insertfollow(String _fd) {
+    boolean insertfollow(String _ui,String _fd) {
         boolean flag = false;
 
         String follower = _fd;
 
 
         try {
-            String insertStrfollow = "INSERT INTO Follow (following_id, follower_id) VALUES('" + o.mf.user_id + "','" + follower + "')";
+            String insertStrfollow = "INSERT INTO Follow (following_id, follower_id) VALUES('" + _ui + "','" + follower + "')";
             stmt.executeUpdate(insertStrfollow);
 
             flag = true;
@@ -195,14 +193,14 @@ public class Database {
     }
     
     /*팔로우 취소*/
-    boolean deletefollow(String _df) {
+    boolean deletefollow(String _ui,String _df) {
         boolean flag = false;
 
         String df = _df;
 
 
         try {
-            String deleteStrfollow = "DELETE FROM Follow where follower_id = '" + df + "' and following_id = '" + o.mf.user_id + "'";
+            String deleteStrfollow = "DELETE FROM Follow where follower_id = '" + df + "' and following_id = '" + _ui + "'";
             stmt.executeUpdate(deleteStrfollow);
 
             flag = true;
@@ -216,14 +214,14 @@ public class Database {
     }
 
     /*유저 이름 변경*/
-    boolean changename(String _cn) {
+    boolean changename(String _ui,String _cn) {
         boolean flag = false;
 
         String cn = _cn;
 
 
         try {
-            String changeStrname = "UPDATE Profile set nickname = '" + cn + "' where user_id = '" + o.mf.user_id + "'";
+            String changeStrname = "UPDATE Profile set nickname = '" + cn + "' where user_id = '" + _ui + "'";
             stmt.executeUpdate(changeStrname);
 
             flag = true;
@@ -237,14 +235,14 @@ public class Database {
     }
 
     /*유저 비밀번호 변경*/
-    boolean changepassword(String _cp) {
+    boolean changepassword(String _ui,String _cp) {
         boolean flag = false;
 
         String cp = _cp;
 
 
         try {
-            String changeStrname = "UPDATE User set password = '" + cp + "' where user_id = '" +o.mf.user_id+ "'";
+            String changeStrname = "UPDATE User set password = '" + cp + "' where user_id = '" + _ui + "'";
             stmt.executeUpdate(changeStrname);
 
             flag = true;
@@ -259,10 +257,10 @@ public class Database {
 
     /*유저의 게시글 정보를 확인*/
     ArrayList<String> article = new ArrayList<String>();
-    boolean Articlechcek() {
+    boolean Articlechcek(String _ui) {
     	boolean flag = false;
         try {
-            String outputStrfollow = "SELECT * FROM Article` where user_id = '" + o.mf.user_id + "'";
+            String outputStrfollow = "SELECT * FROM Article` where user_id = '" + _ui + "'";
             rs = stmt.executeQuery(outputStrfollow);
             while (rs.next()) {
                 article.add(rs.getString("article_id"));
