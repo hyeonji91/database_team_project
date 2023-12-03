@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class LogIn extends JFrame{
+public class LogIn extends JPanel{
 
     JLabel lblIntro, lblregister, lblAsGuest,lblID,IPassword,IText; 
     JTextField txtUsername, txtID, txtPWD; // Added txtID
@@ -13,12 +13,11 @@ public class LogIn extends JFrame{
     JButton btnLogin, btnRegister, btnAsGuest;
     JButton btnTogglePassword;
     
-    public LogIn(){
-        super("Instagram");
+    public LogIn(JFrame main){
+        //super("Instagram");
         
-	    //ImageIcon icon = new ImageIcon(getClass().getResource("logo.png"));
-	    ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
-        setIconImage(icon.getImage());
+	    //ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
+        //setIconImage(icon.getImage());
         
         setLayout(null);
         lblIntro = new JLabel("Instagram");
@@ -34,17 +33,28 @@ public class LogIn extends JFrame{
         btnTogglePassword = new JButton("비밀번호 표시");
         
         //Size Control
-        btnTogglePassword.setBounds(245, 215, 100, 15);//x,y,width,height
-        lblIntro.setBounds(150, 40, 200, 50);
-        lblID.setBounds(50, 100, 50, 40); // Adjusted position for ID label
-        txtID.setBounds(100, 100, 250, 40); // Added txtID position
-        IPassword.setBounds(30, 170, 60, 45);
-        txtPass.setBounds(100, 170, 250, 40); 
-        btnLogin.setBounds(125, 250, 150, 40);
-        lblregister.setBounds(110, 300, 210, 18);
-        IText.setBounds(85,320,250,20);
-        btnRegister.setBounds(125, 365, 150, 40);
-        lblAsGuest.setBounds(135, 415, 150, 12);
+//        btnTogglePassword.setBounds(245, 215, 100, 15);//x,y,width,height
+//        lblIntro.setBounds(150, 40, 200, 50);
+//        lblID.setBounds(50, 100, 50, 40); // Adjusted position for ID label
+//        txtID.setBounds(100, 100, 250, 40); // Added txtID position
+//        IPassword.setBounds(30, 170, 60, 45);
+//        txtPass.setBounds(100, 170, 250, 40); 
+//        btnLogin.setBounds(125, 250, 150, 40);
+//        lblregister.setBounds(110, 300, 210, 18);
+//        IText.setBounds(85,320,250,20);
+//        btnRegister.setBounds(125, 365, 150, 40);
+//        lblAsGuest.setBounds(135, 415, 150, 12);
+        btnTogglePassword.setBounds(270, 215, 100, 15);//x,y,width,height
+        lblIntro.setBounds(175, 40, 200, 50);
+        lblID.setBounds(75, 100, 50, 40); // Adjusted position for ID label
+        txtID.setBounds(125, 100, 250, 40); // Added txtID position
+        IPassword.setBounds(55, 170, 60, 45);
+        txtPass.setBounds(125, 170, 250, 40); 
+        btnLogin.setBounds(150, 250, 150, 40);
+        lblregister.setBounds(135, 300, 210, 18);
+        IText.setBounds(110,320,250,20);
+        btnRegister.setBounds(150, 365, 150, 40);
+        lblAsGuest.setBounds(160, 415, 150, 12);
 
         //Font
         lblIntro.setFont(new Font("Serif", Font.ITALIC|Font.BOLD, 20));
@@ -52,25 +62,25 @@ public class LogIn extends JFrame{
         btnTogglePassword.setFont(new Font("Serif",Font.PLAIN,10));
         
         //btn function
-        btnLogin.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        		String id="Bo";
-        		String pass="1234";
-        		
-        		if(id.equals(txtID.getText())&&pass.equals(txtPass.getText())) {
-        			JOptionPane.showMessageDialog(null, "You have logged in sucessfully");
-        			//setVisible(false);
-        		}
-        		else {
-        			JOptionPane.showConfirmDialog(null, "You failed to log in");
-        		}
-        	}
-        });
+//        btnLogin.addActionListener(new ActionListener() {
+//        	public void actionPerformed(ActionEvent e) {
+//        		String id="Bo";
+//        		String pass="1234";
+//        		
+//        		if(id.equals(txtID.getText())&&pass.equals(txtPass.getText())) {
+//        			JOptionPane.showMessageDialog(null, "You have logged in sucessfully");
+//        			//setVisible(false);
+//        		}
+//        		else {
+//        			JOptionPane.showConfirmDialog(null, "You failed to log in");
+//        		}
+//        	}
+//        });
         
         // ActionListener for Toggle Password button
         btnTogglePassword.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                showPasswordDialog();
+                showPasswordDialog(main);
             }
         });
         
@@ -85,19 +95,19 @@ public class LogIn extends JFrame{
         add(btnRegister);
         add(lblAsGuest);
         add(btnTogglePassword);
-        addWindowListener(new WindowAdapter(){
-            public void windowClosing(WindowEvent exit){
-                System.exit(0);
-            }
-        });
+//        addWindowListener(new WindowAdapter(){
+//            public void windowClosing(WindowEvent exit){
+//                System.exit(0);
+//            }
+//        });
 
         setSize(400, 600);
         setVisible(true);
-        setLocationRelativeTo(null);
-        setResizable(false);
+//        setLocationRelativeTo(null);
+//        setResizable(false);
     }
-    private void showPasswordDialog() {
-        JDialog passwordDialog = new JDialog(this, "Password Display", true);
+    private void showPasswordDialog(JFrame main) {
+        JDialog passwordDialog = new JDialog(main, "Password Display", true);
         passwordDialog.setLayout(new FlowLayout());
         
         // 비밀번호 텍스트를 표시할 JLabel

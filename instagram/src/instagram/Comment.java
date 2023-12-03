@@ -33,7 +33,7 @@ class comment_struct{
 
 class Comment {
    
-	Comment(){
+	Comment(MainFrame pFrame){
       
       JFrame frame = new JFrame("Instagram");
       frame.setSize(450, 700);
@@ -54,7 +54,7 @@ class Comment {
        logoLabel.setBackground(Color.WHITE);
        logoLabel.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            new post();
+            new post(pFrame);
             frame.setVisible(false);
          }
       });
@@ -71,7 +71,7 @@ class Comment {
          public void actionPerformed(ActionEvent e) {
             String temp = inputName.getText();
             inputName.setText("");
-            new Comment();
+            new Comment(pFrame);
             frame.setVisible(false);
          }
       });
@@ -182,11 +182,11 @@ class Comment {
        //페널째로 프레임의 상단에 추가하기
        frame.add(main, BorderLayout.CENTER);
        frame.setVisible(true);
-       frame.setLocation(500, 150);
+       frame.setLocationRelativeTo(null);//화면 중앙에 배치
 
    }
    
    public static void main(String args[]) throws IOException {
-        new Comment();
+        //new Comment(pFrame);
     }
 }

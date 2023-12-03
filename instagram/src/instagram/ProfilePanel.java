@@ -34,7 +34,7 @@ public class ProfilePanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public ProfilePanel() {
+	public ProfilePanel(MainFrame pFrame) {
 		setLayout(new GridLayout(0, 1, 0, 0));
 		JPanel cards = new JPanel(new CardLayout());
 		
@@ -46,13 +46,13 @@ public class ProfilePanel extends JPanel {
 		
 		//수정 확인 버튼
 		JButton editBtn = new JButton("확인");
-		editBtn.setBounds(280, 10, 60, 23);
+		editBtn.setBounds(330, 10, 60, 23);
 		editBtn.setFont(defaultFont);
 		editProfilePanel.add(editBtn);
 		
 		//취소 버튼 (나가기)
 		JButton exitBtn = new JButton("취소");
-		exitBtn.setBounds(10, 10, 60, 23);
+		exitBtn.setBounds(60, 10, 60, 23);
 		exitBtn.setFont(defaultFont);
 		editProfilePanel.add(exitBtn);
 		
@@ -69,13 +69,13 @@ public class ProfilePanel extends JPanel {
 		ImgLabel.setBackground(new Color(255, 255, 255));
 		ImgLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		ImgLabel.setIcon(editProfileImgicon);
-		ImgLabel.setBounds(135, 57, 80, 80);
+		ImgLabel.setBounds(185, 57, 80, 80);
 		editProfilePanel.add(ImgLabel);
 		
 		//프로필 이미지 수정 버튼
 		JButton editImgBtn = new JButton("사진 수정");
 		editImgBtn.setFont(defaultFont);
-		editImgBtn.setBounds(127, 147, 93, 23);
+		editImgBtn.setBounds(177, 147, 93, 23);
 		editProfilePanel.add(editImgBtn);
 		
 		
@@ -109,12 +109,12 @@ public class ProfilePanel extends JPanel {
 		JLabel nameLabel = new JLabel("이름");
 		nameLabel.setFont(defaultFont);
 		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		nameLabel.setBounds(10, 190, 50, 15);
+		nameLabel.setBounds(60, 190, 50, 15);
 		editProfilePanel.add(nameLabel);
 		//이름 수정 textField
 		nameTF = new JTextField();
 		nameTF.setFont(defaultFont);
-		nameTF.setBounds(70, 187, 270, 21);
+		nameTF.setBounds(120, 187, 270, 21);
 		editProfilePanel.add(nameTF);
 		nameTF.setColumns(10);
 		
@@ -122,77 +122,77 @@ public class ProfilePanel extends JPanel {
 		JLabel idEditLabel = new JLabel("아이디");
 		idEditLabel.setFont(defaultFont);
 		idEditLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		idEditLabel.setBounds(10, 220, 50, 15);
+		idEditLabel.setBounds(60, 220, 50, 15);
 		editProfilePanel.add(idEditLabel);
 		//아이디 수정 textField
 		idTF = new JTextField();
 		idTF.setFont(defaultFont);
 		idTF.setColumns(10);
-		idTF.setBounds(70, 217, 270, 21);
+		idTF.setBounds(120, 217, 270, 21);
 		editProfilePanel.add(idTF);
 		
 		//비밀번호 수정
 		JLabel pwdLabel = new JLabel("비밀번호");
 		pwdLabel.setFont(defaultFont);
 		pwdLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		pwdLabel.setBounds(10, 250, 50, 15);
+		pwdLabel.setBounds(60, 250, 50, 15);
 		editProfilePanel.add(pwdLabel);
 		//비밀번호 수정 passwordField
 		pwdPF = new JPasswordField();
 		pwdPF.setFont(defaultFont);
-		pwdPF.setBounds(70, 247, 270, 21);
+		pwdPF.setBounds(120, 247, 270, 21);
 		editProfilePanel.add(pwdPF);
 		
 		//생일 수정
 		JLabel birthLabel = new JLabel("생일");
 		birthLabel.setFont(defaultFont);
 		birthLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		birthLabel.setBounds(10, 280, 50, 15);
+		birthLabel.setBounds(60, 280, 50, 15);
 		editProfilePanel.add(birthLabel);
 		//생일 수정 passwordField
 		birthTF = new JTextField();
 		birthTF.setFont(defaultFont);
 		birthTF.setColumns(10);
-		birthTF.setBounds(70, 277, 270, 21);
+		birthTF.setBounds(120, 277, 270, 21);
 		editProfilePanel.add(birthTF);
 		
 		//성별 수정
 		JLabel genderLabel = new JLabel("성별");
 		genderLabel.setFont(defaultFont);
 		genderLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		genderLabel.setBounds(10, 310, 50, 15);
+		genderLabel.setBounds(60, 310, 50, 15);
 		editProfilePanel.add(genderLabel);
 		//성별 수정 passwordField
 		genderTF = new JTextField();
 		genderTF.setFont(defaultFont);
 		genderTF.setColumns(10);
-		genderTF.setBounds(70, 307, 270, 21);
+		genderTF.setBounds(120, 307, 270, 21);
 		editProfilePanel.add(genderTF);
 		
 		//핸드폰 번호 수정
 		JLabel phoneLabel = new JLabel("phone");
 		phoneLabel.setFont(defaultFont);
 		phoneLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		phoneLabel.setBounds(10, 340, 50, 15);
+		phoneLabel.setBounds(60, 340, 50, 15);
 		editProfilePanel.add(phoneLabel);
 		//핸드폰 번호 수정 passwordField
 		phoneTF = new JTextField();
 		phoneTF.setFont(defaultFont);
 		phoneTF.setColumns(10);
-		phoneTF.setBounds(70, 337, 270, 21);
+		phoneTF.setBounds(120, 337, 270, 21);
 		editProfilePanel.add(phoneTF);
 		
 		//주소 수정
 		JLabel addressLabel = new JLabel("주소");
 		addressLabel.setFont(defaultFont);
 		addressLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		addressLabel.setBounds(10, 370, 50, 15);
+		addressLabel.setBounds(60, 370, 50, 15);
 		editProfilePanel.add(addressLabel);
 		//주소 수정 passwordField
 		addressTF = new JTextField();
 		addressTF.setFont(defaultFont);
 		addressTF.setColumns(10);
-		addressTF.setBounds(70, 367, 270, 43);
+		addressTF.setBounds(120, 367, 270, 43);
 		editProfilePanel.add(addressTF);
 		//add(followingPanel, "FollowingPanel");
 		
@@ -203,15 +203,21 @@ public class ProfilePanel extends JPanel {
 		//프로필 화면========================================================================================
 		JPanel profileMainPanel = new JPanel();
 		//add(profileMainPanel, "profileMainPanel");
-		profileMainPanel.setLayout(null);
+		 GridBagLayout Gbag = new GridBagLayout();
+		GridBagConstraints gbc= new GridBagConstraints();
+		profileMainPanel.setLayout(Gbag);
+		gbc.fill=GridBagConstraints.BOTH;
 		profileMainPanel.setBackground(Color.WHITE);
 
-		
+		JPanel profilePanel = new JPanel();
+		profilePanel.setLayout(null);
+		profilePanel.setBackground(Color.WHITE);
+
 		//id
 		JLabel idLabel = new JLabel("id");
 		idLabel.setFont(boldFont);
-		idLabel.setBounds(10, 10, 50, 15);
-		profileMainPanel.add(idLabel);
+		idLabel.setBounds(60, 10, 50, 15);
+		profilePanel.add(idLabel);
 		
 		//프로필 이미지
 		ImageIcon ProfileImgIcon = null;
@@ -225,93 +231,125 @@ public class ProfilePanel extends JPanel {
 		JLabel profileImgLabel = new JLabel("");
 		profileImgLabel.setFont(defaultFont);
 		profileImgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		profileImgLabel.setBounds(10, 35, 70, 70);
+		profileImgLabel.setBounds(60, 35, 70, 70);
 		profileImgLabel.setIcon(ProfileImgIcon);
-		profileMainPanel.add(profileImgLabel);
+		profilePanel.add(profileImgLabel);
 		
 		//게시물 수
 		JLabel articleNumLabel = new JLabel("10");
 		articleNumLabel.setFont(boldFont);
 		articleNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		articleNumLabel.setBounds(120, 50, 50, 15);
-		profileMainPanel.add(articleNumLabel);
+		articleNumLabel.setBounds(170, 50, 50, 15);
+		profilePanel.add(articleNumLabel);
 		//게시물 라벨
 		JLabel articleLabel = new JLabel("게시물");
 		articleLabel.setFont(defaultFont);
 		articleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		articleLabel.setBounds(120, 75, 50, 15);
-		profileMainPanel.add(articleLabel);
+		articleLabel.setBounds(170, 75, 50, 15);
+		profilePanel.add(articleLabel);
 		
 		//팔로워 수
 		JLabel followerNumLabel = new JLabel("10");
 		followerNumLabel.setFont(boldFont);
 		followerNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followerNumLabel.setBounds(190, 50, 50, 15);
-		profileMainPanel.add(followerNumLabel);
+		followerNumLabel.setBounds(240, 50, 50, 15);
+		profilePanel.add(followerNumLabel);
 		//팔로워 라벨
 		JLabel followerLabel = new JLabel("팔로워");
 		followerLabel.setFont(defaultFont);
 		followerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followerLabel.setBounds(190, 75, 50, 15);
-		profileMainPanel.add(followerLabel);
+		followerLabel.setBounds(240, 75, 50, 15);
+		profilePanel.add(followerLabel);
 		
 		//팔로잉 수
 		JLabel followingNumLabel = new JLabel("10");
 		followingNumLabel.setFont(boldFont);
 		followingNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followingNumLabel.setBounds(260, 50, 50, 15);
-		profileMainPanel.add(followingNumLabel);
+		followingNumLabel.setBounds(310, 50, 50, 15);
+		profilePanel.add(followingNumLabel);
 		//팔로잉 라벨
 		JLabel followingLabel = new JLabel("팔로잉");
 		followingLabel.setFont(defaultFont);
 		followingLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followingLabel.setBounds(260, 75, 50, 15);
-		profileMainPanel.add(followingLabel);
+		followingLabel.setBounds(310, 75, 50, 15);
+		profilePanel.add(followingLabel);
 		
 		//이름라벨
 		JLabel nameLabel2 = new JLabel("이름");
 		nameLabel2.setFont(defaultFont);
-		nameLabel2.setBounds(10, 115, 50, 15);
-		profileMainPanel.add(nameLabel2);
+		nameLabel2.setBounds(60, 115, 50, 15);
+		profilePanel.add(nameLabel2);
 		
 		//프로필 편집 버튼
 		JButton profileEditBtn = new JButton("프로필 편집");
 		profileEditBtn.setFont(defaultFont);
-		profileEditBtn.setBounds(217, 114, 100, 23);
-		profileMainPanel.add(profileEditBtn);
+		profileEditBtn.setBounds(267, 114, 100, 23);
+		profilePanel.add(profileEditBtn);
+		
+		gbc.weightx=0.1;
+		gbc.weighty=0.1;// 비율이 1:3이므로 버튼의 크기는 가로축으로 2배
+        gbc.gridx=0;  
+        gbc.gridy=0; 
+        Gbag.setConstraints(profilePanel, gbc);
+		profileMainPanel.add(profilePanel);
+		
 		
 		//scroll 안에 넣을 판넬
 		JPanel ArticleScrollItemPanel = new JPanel();
 		ArticleScrollItemPanel.setBackground(Color.WHITE);
-		ArticleScrollItemPanel.setLayout(new GridLayout(0,4, 10, 10));
-		//ArticleScrollItemPanel.setLayout(new GridLayout())
-		//ArticleScrollItemPanel.setLayout(new BoxLayout(ArticleScrollItemPanel, BoxLayout.Y_AXIS));
+		ArticleScrollItemPanel.setLayout(new GridLayout(0,3));
+		
 		//임시 게시글 이미지--여긴 삭제하고 받아온 데이터 안에 이미지 사용할 것
 		ImageIcon articleImgIcon = null;
 		try {
 		    URL imageUrl = new URL("https://github.com/hyeonji91/database_team_project/assets/112065014/db0fbf09-d522-40ef-ad0b-7c802ecd455c");
 		    articleImgIcon = new ImageIcon(imageUrl);
-		    articleImgIcon = utile.ImageIconResize.resizeImage(articleImgIcon, 70, 70);
+		    articleImgIcon = utile.ImageIconResize.resizeImage(articleImgIcon, 133, 133);
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
 		
-		List<String> articleData = getData();// 데이터를 담은 리스트[임시]
-        
+		// 데이터를 담은 리스트[임시]
+	    struct[] articleData = new struct[15];
+	    for(int i=0;i<articleData.length;i++) {
+	    	articleData[i]=new struct();
+	    	articleData[i].set(0,"Kang","Context",123,"https://blog.kakaocdn.net/dn/0mySg/btqCUccOGVk/nQ68nZiNKoIEGNJkooELF1/img.jpg","./bin/image/user.png");
+	    }
+	    
         // 그 데이터로 만든 판넬 ArticleScrollItemPanel에 붙이기
-        JLabel[] articles = new JLabel[articleData.size()];
-        try {
-            for (int i = 0; i < articleData.size(); i++) {
-            	articles[i] = new JLabel();
-            	articles[i].setIcon(articleImgIcon);
-            	ArticleScrollItemPanel.add(articles[i]);
-            	articles[i].addMouseListener(new MouseAdapter() {
-        	        public void mouseClicked(MouseEvent e) {
-        				System.out.println("clik article");
-        	        }
-        		});
+        JLabel[] articles = new JLabel[articleData.length];
+        
 
-            }
+        try {
+//            for (int i = 0; i < articleData.length; i++) {
+//            	articles[i] = new JLabel();
+//            	articles[i].setIcon(articleImgIcon);
+//            	ArticleScrollItemPanel.add(articles[i]);
+//            	
+//            	articles[i].addMouseListener(new MouseAdapter() {
+//        	        public void mouseClicked(MouseEvent e) {
+//        				System.out.println("clik articleImg");
+//        				new postPanel(articleData[i]);
+//        	        }
+//        		});
+//
+//            }
+        	for (int i = 0; i < articleData.length; i++) {
+        	    articles[i] = new JLabel();
+        	    articles[i].setIcon(articleImgIcon);
+        	    ArticleScrollItemPanel.add(articles[i]);
+
+        	    int finalI = i;  // effectively final로 만들어주기 위해 새로운 변수에 할당
+
+            	articles[i].addMouseListener(new MouseAdapter() {
+    	        public void mouseClicked(MouseEvent e) {
+    				System.out.println("click articleImg");
+    				JPanel post = new PostPanel(articleData[finalI], pFrame);
+    				pFrame.change(post);
+    				System.out.println("click articleImg -> post!");
+    	        }
+    		});
+        	}
         } catch (Exception e2) {
             JOptionPane.showMessageDialog(null, e2);
         }
@@ -319,8 +357,15 @@ public class ProfilePanel extends JPanel {
 		JScrollPane scrollPane = new JScrollPane(ArticleScrollItemPanel);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		scrollPane.setBounds(0, 160, 360, 250);
+		scrollPane.setBounds(0, 0, 360, 250);
+		gbc.weightx=0.1;
+		gbc.weighty=0.3;// 비율이 1:3이므로 버튼의 크기는 가로축으로 2배
+        gbc.gridx=0;  
+        gbc.gridy=1; 
+        gbc.gridwidth = 1;
+        Gbag.setConstraints(scrollPane, gbc);
 		profileMainPanel.add(scrollPane);
+		
 		
 		
 		
