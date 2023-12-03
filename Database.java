@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
-//수정되고있는파일
+
 public class Database {
     Connection con = null;
     Statement stmt = null;
@@ -23,60 +23,7 @@ public class Database {
         }
     }
 
-    /* 로그인 정보를 확인 */
-    boolean logincheck(String _i, String _p) {
-        boolean flag = false;
-
-        String id = _i;
-        String pw = _p;
-
-        try {
-            String checkingStr = "SELECT password FROM user WHERE id='" + id + "'";
-            ResultSet result = stmt.executeQuery(checkingStr);
-
-            int count = 0;
-            while (result.next()) {
-                if (pw.equals(result.getString("password"))) {
-                    flag = true;
-                    System.out.println("로그인 성공");
-                } else {
-                    flag = false;
-                    System.out.println("로그인 실패");
-                }
-                count++;
-
-            }
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("로그인 실패 > " + e.toString());
-        }
-
-        return flag;
-    }
-
-    boolean joinCheck(String _i, String _pw, String _c, String _d, String _e, String _ph) {
-        boolean flag = false;
-
-        String id = _i;
-        String pw = _pw;
-        String cho = _c;
-        String name = _d;
-        String email = _e;
-        String phone = _ph;
-
-        try {
-            String insertStr = "INSERT INTO user VALUES('" + id + "', '" + pw + "', '" + cho+ "', '" +name+ "', '"+email+"', '" + phone + "')";
-            stmt.executeUpdate(insertStr);
-
-            flag = true;
-            System.out.println("회원가입 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("회원가입 실패 > " + e.toString());
-        }
-
-        return flag;
-    }
+   
 
     /*게시물 올리기 (우리가만든 쿼리문 사용)*/
     boolean inputpost( String _lken, String _cxt, String _created, String _ui) {
@@ -109,7 +56,7 @@ public class Database {
     }
     Integer idx;
     
-    /*댓글 개수 뽑아오는거임 (새로운 쿼리문 만듦) */
+    /*댓글 개수 뽑아오는거 (새로운 쿼리문 만듦) */
     boolean comment_idx(String _ai, String _cc) {
         boolean flag = false;
         String article_id = _ai;
@@ -432,172 +379,7 @@ public class Database {
     }
 
     
-    ArrayList<String> follow = new ArrayList<String>();
-
-    boolean followchcek() {
-        boolean flag = false;
-
-
-        try {
-            String outputStrfollow = "SELECT * FROM follow where follow_user_id = '" + o.mf.uuid + "'";
-            rs = stmt.executeQuery(outputStrfollow);
-            while (rs.next()) {
-                follow.add(rs.getString("followed_user_id"));
-            }
-            flag = true;
-            System.out.println("팔로우 확인 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("팔로우 확인 실패 > " + e.toString());
-        }
-        return flag;
-    }
-
-    ArrayList<String> followed = new ArrayList<String>();
-
-    boolean followedchcek() {
-        boolean flag = false;
-
-
-        try {
-            String outputStrfollow = "SELECT * FROM follow where followed_user_id = '" + o.mf.uuid + "'";
-            rs = stmt.executeQuery(outputStrfollow);
-            while (rs.next()) {
-                followed.add(rs.getString("follow_user_id"));
-            }
-            flag = true;
-            System.out.println("팔로우ed 확인 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("팔로우ed 확인 실패 > " + e.toString());
-        }
-        return flag;
-    }
-
-
-    ArrayList<String> stid = new ArrayList<String>();
-
-    boolean setid() {
-        boolean flag = false;
-
-
-        try {
-            String outputStrfollow = "SELECT * FROM user ";
-            rs = stmt.executeQuery(outputStrfollow);
-            while (rs.next()) {
-                stid.add(rs.getString("id"));
-            }
-            flag = true;
-            System.out.println("id 불러오기 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("id 불러오기 실패 > " + e.toString());
-        }
-        return flag;
-    }
-
-    ArrayList<String> inner = new ArrayList<String>();
-    boolean seek_follow_post(String _fd) {
-        boolean flag = false;
-        inner.clear();
-        String followed = _fd;
-
-        try {
-            String seek = "SELECT * FROM post where user_id = '" + followed + "'";
-            rs = stmt.executeQuery(seek);
-            while (rs.next()) {
-                inner.add(rs.getString("id"));
-                inner.add(rs.getString("postinner"));
-            }
-
-            flag = true;
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("글 불러오기 오류 > " + e.toString());
-
-        }
-        return flag;
-    }
-    boolean insertfollow(String _fd) {
-        boolean flag = false;
-
-        String followed = _fd;
-
-
-        try {
-            String insertStrfollow = "INSERT INTO follow (follow_user_id, followed_user_id) VALUES('" + o.mf.uuid + "','" + followed + "')";
-            stmt.executeUpdate(insertStrfollow);
-
-            flag = true;
-            JOptionPane.showMessageDialog(null, "팔로우 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("팔로우 오류 > " + e.toString());
-            JOptionPane.showMessageDialog(null, "팔로우 실패");
-        }
-        return flag;
-    }
-
-    boolean deletefollow(String _df) {
-        boolean flag = false;
-
-        String df = _df;
-
-
-        try {
-            String deleteStrfollow = "delete FROM follow where followed_user_id = '" + df + "' and follow_user_id = '" + o.mf.uuid + "'";
-            stmt.executeUpdate(deleteStrfollow);
-
-            flag = true;
-            JOptionPane.showMessageDialog(null, "팔로우 삭제 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("팔로우 삭제 오류 > " + e.toString());
-            JOptionPane.showMessageDialog(null, "팔로우 삭제 실패");
-        }
-        return flag;
-    }
-
-    boolean changename(String _cn) {
-        boolean flag = false;
-
-        String cn = _cn;
-
-
-        try {
-            String changeStrname = "update user set uname = '" + cn + "' where id = '" + o.mf.uuid + "'";
-            stmt.executeUpdate(changeStrname);
-
-            flag = true;
-            JOptionPane.showMessageDialog(null, "이름 변경 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("이름 변경 오류 > " + e.toString());
-            JOptionPane.showMessageDialog(null, "이름 변경 실패");
-        }
-        return flag;
-    }
-
-    boolean changepassword(String _cp) {
-        boolean flag = false;
-
-        String cp = _cp;
-
-
-        try {
-            String changeStrname = "update user set password = '" + cp + "' where id = '" +o.mf.uuid+ "'";
-            stmt.executeUpdate(changeStrname);
-
-            flag = true;
-            JOptionPane.showMessageDialog(null, "비밀번호 변경 성공");
-        } catch (Exception e) {
-            flag = false;
-            System.out.println("비밀번호 변경 오류 > " + e.toString());
-            JOptionPane.showMessageDialog(null, "비밀번호 변경 실패");
-        }
-        return flag;
-    }
-
+  
 
 }
 
