@@ -1,5 +1,6 @@
 package instagram;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -22,7 +23,7 @@ public class FollowPanelItem extends JPanel {
 	//매개변수에 데이터 적기:지금 있는 건 임시
 
 	public FollowPanelItem(String d) {
-
+		this.setBackground(Color.WHITE);
 		GridBagLayout gbl_panel = new GridBagLayout();
 		gbl_panel.columnWidths = new int[]{0, 0};
 		gbl_panel.rowHeights = new int[]{0, 0};

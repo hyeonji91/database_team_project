@@ -41,8 +41,8 @@ public class ProfilePanel extends JPanel {
 		
 		//프로필 수정 화면
 		JPanel editProfilePanel = new JPanel();
-		//add(editProfilePanel, "editProfilePanel");//cardLayout에서 사용할 이름 설정
 		editProfilePanel.setLayout(null);//AbsoluteLayout : 배치관리자가 없는 컨테이너로 설정
+		editProfilePanel.setBackground(Color.WHITE);
 		
 		//수정 확인 버튼
 		JButton editBtn = new JButton("확인");
@@ -204,6 +204,8 @@ public class ProfilePanel extends JPanel {
 		JPanel profileMainPanel = new JPanel();
 		//add(profileMainPanel, "profileMainPanel");
 		profileMainPanel.setLayout(null);
+		profileMainPanel.setBackground(Color.WHITE);
+
 		
 		//id
 		JLabel idLabel = new JLabel("id");
@@ -280,6 +282,7 @@ public class ProfilePanel extends JPanel {
 		
 		//scroll 안에 넣을 판넬
 		JPanel ArticleScrollItemPanel = new JPanel();
+		ArticleScrollItemPanel.setBackground(Color.WHITE);
 		ArticleScrollItemPanel.setLayout(new GridLayout(0,4, 10, 10));
 		//ArticleScrollItemPanel.setLayout(new GridLayout())
 		//ArticleScrollItemPanel.setLayout(new BoxLayout(ArticleScrollItemPanel, BoxLayout.Y_AXIS));
@@ -327,6 +330,7 @@ public class ProfilePanel extends JPanel {
 		
 		//팔로워 화면 =====================================================================
 		JPanel followerPanel = new JPanel();
+		followerPanel.setBackground(Color.WHITE);
 
 		//gridbaglayout설정
 		GridBagLayout gbl_followerPanel = new GridBagLayout();
@@ -365,6 +369,7 @@ public class ProfilePanel extends JPanel {
 				
 		//팔로워목록이 들어갈 스클롤 팬
 		JScrollPane followerScrollPane = new JScrollPane(followerScrollItemPanel);
+		followerScrollPane.setBackground(Color.WHITE);
 		GridBagConstraints gbc_followerScrollPane = new GridBagConstraints();
 		gbc_followerScrollPane.gridwidth = 2;
 		gbc_followerScrollPane.fill = GridBagConstraints.BOTH;//꽉 채우기
@@ -377,7 +382,8 @@ public class ProfilePanel extends JPanel {
 		
 		//팔로잉 화면=======================================================================
 		JPanel followingPanel = new JPanel();
-		
+		followingPanel.setBackground(Color.WHITE);
+
 		//gridbaglayout설정
 		GridBagLayout gbl_followingPanel = new GridBagLayout();
 		gbl_followingPanel.columnWidths = new int[]{0, 348, 0};
@@ -412,6 +418,7 @@ public class ProfilePanel extends JPanel {
 	
 		//스크롤 판넬
 		JScrollPane followingScrollPane = new JScrollPane(followingScrollItemPanel);
+		followingScrollPane.setBackground(Color.WHITE);
 		GridBagConstraints gbc_followingScrollPane = new GridBagConstraints();
 		gbc_followingScrollPane.gridwidth = 2;
 		gbc_followingScrollPane.fill = GridBagConstraints.BOTH;

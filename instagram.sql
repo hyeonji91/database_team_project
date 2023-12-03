@@ -590,6 +590,7 @@ on a.article_id = img.article_id
 
 
 
+
 #좋아요 추가
 INSERT INTO Likes (user_id, article_id) VALUES ('[사용자 ID]', '[게시물 ID]');
 

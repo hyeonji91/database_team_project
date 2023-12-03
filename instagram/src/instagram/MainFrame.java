@@ -1,5 +1,6 @@
 package instagram;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -35,9 +36,11 @@ public class MainFrame extends JFrame {
 	public MainFrame() {
 		setTitle("instagram");//프레임 제목 설정
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		setLocationRelativeTo(null);//화면 중앙에 배치
 		setBounds(100, 100, 400, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 
