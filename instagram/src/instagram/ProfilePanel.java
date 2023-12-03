@@ -427,7 +427,7 @@ public class ProfilePanel extends JPanel {
 		followingPanel.add(followingScrollPane, gbc_followingScrollPane);
 		
 		
-		
+
 		
 		// CardLayout에 패널들 추가
 		cards.add(profileMainPanel, "profileMainPanel");

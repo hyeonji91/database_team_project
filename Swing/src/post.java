@@ -185,7 +185,7 @@ class post {
 		    //댓글창 열기
 		    commentLabel.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-
+					new Comment();
 				}
 			});
 		    

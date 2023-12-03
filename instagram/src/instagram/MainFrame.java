@@ -1,13 +1,18 @@
 package instagram;
 
+import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
@@ -38,17 +43,44 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		setLocationRelativeTo(null);//화면 중앙에 배치
-		setBounds(100, 100, 400, 500);
+		setSize(400, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 
-		
-	
+		JPanel cards = new JPanel(new CardLayout());
 		
 		JTabbedPane pane = createTabbedPane();//메뉴
-		contentPane.add(pane);
+		LogIn login = new LogIn();
+
+		// CardLayout에 패널들 추가
+		cards.add(login, "login");
+		cards.add(pane, "TabbedPane");
+		CardLayout cl = (CardLayout) cards.getLayout();
+
+		login.btnLogin.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		String id="Bo";
+        		String pass="1234";
+        		
+        		if(id.equals(login.txtID.getText())&&pass.equals(login.txtPass.getText())) {
+        			JOptionPane.showMessageDialog(null, "You have logged in sucessfully");
+        			cl.show(cards, "TabbedPane");
+        		}
+        		else {
+        			JOptionPane.showConfirmDialog(null, "You failed to log in");
+        		}
+        	}
+        });
+		
+		
+		// 전체에 추가
+		
+		
+	
+		contentPane.add(cards);
+		//contentPane.add(pane);
 		
 		setContentPane(contentPane);
 	}
@@ -56,9 +88,10 @@ public class MainFrame extends JFrame {
 	public JTabbedPane createTabbedPane() {
 		JTabbedPane pane = new JTabbedPane();
 		
+		
 //		pane.addTab("Article", new JLabel("article"));
 //		pane.addTab("Profile", new JLabel("profile"));
-		pane.addTab("Article", new ArticlePanel());
+		pane.addTab("Article", new post());
 		pane.addTab("Profile", new ProfilePanel());
 		
 		return pane;
