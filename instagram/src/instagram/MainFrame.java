@@ -55,7 +55,7 @@ public class MainFrame extends JFrame {
 
 		JPanel cards = new JPanel(new CardLayout());
 		
-		JTabbedPane pane = createTabbedPane(this);//메뉴
+		JTabbedPane pane = createTabbedPane();//메뉴
 		LogIn login = new LogIn(this);
 
 		// CardLayout에 패널들 추가
@@ -89,54 +89,54 @@ public class MainFrame extends JFrame {
 		setContentPane(contentPane);
 	}
 	
-    public ProfilePanel profilePanel = null;
-    public PostPanel postPanel = null;
- 
-    public void change(JPanel p) { // 패널 1번과 2번 변경 후 재설정
- 
-    	JFrame frame = new JFrame();
-    	frame.setTitle("instagram");//프레임 제목 설정
-		ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
-		frame.setIconImage(icon.getImage());
-		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(450, 700);
-		frame.setLocationRelativeTo(null);//화면 중앙에 배치
-		frame.setResizable(false);
-    	
-		frame.add(p);
-	    frame.setVisible(true);
-
-		
-		
-//        getContentPane().removeAll();
-//        getContentPane().add(p);
-//        revalidate();
-//        repaint();
-        
-		
-		
-//        if (panelName.equals("profilePanel")) {
-//            getContentPane().removeAll();
-//            getContentPane().add(profilePanel);
-//            revalidate();
-//            repaint();
-//        } else {
-//            getContentPane().removeAll();
-//            getContentPane().add(postPanel);
-//            revalidate();
-//            repaint();
-//        }
-    }
+//    public ProfilePanel profilePanel = null;
+//    public PostPanel postPanel = null;
+// 
+//    public void change(JPanel p) { // 패널 1번과 2번 변경 후 재설정
+// 
+//    	JFrame frame = new JFrame();
+//    	frame.setTitle("instagram");//프레임 제목 설정
+//		ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
+//		frame.setIconImage(icon.getImage());
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setSize(450, 700);
+//		frame.setLocationRelativeTo(null);//화면 중앙에 배치
+//		frame.setResizable(false);
+//    	
+//		frame.add(p);
+//	    frame.setVisible(true);
+//
+//		
+//		
+////        getContentPane().removeAll();
+////        getContentPane().add(p);
+////        revalidate();
+////        repaint();
+//        
+//		
+//		
+////        if (panelName.equals("profilePanel")) {
+////            getContentPane().removeAll();
+////            getContentPane().add(profilePanel);
+////            revalidate();
+////            repaint();
+////        } else {
+////            getContentPane().removeAll();
+////            getContentPane().add(postPanel);
+////            revalidate();
+////            repaint();
+////        }
+//    }
 	
 	
-	public JTabbedPane createTabbedPane(MainFrame frame) {
+	public JTabbedPane createTabbedPane() {
 		JTabbedPane pane = new JTabbedPane();
 		pane.setTabPlacement(JTabbedPane.BOTTOM);
 		
 //		pane.addTab("Article", new JLabel("article"));
 //		pane.addTab("Profile", new JLabel("profile"));
-		pane.addTab("Article", new post(frame));
-		pane.addTab("Profile", new ProfilePanel(frame));
+		pane.addTab("Article", new post());
+		pane.addTab("Profile", new ProfilePanel());
 		
 		return pane;
 	}

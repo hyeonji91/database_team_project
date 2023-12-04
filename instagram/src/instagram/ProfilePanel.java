@@ -34,7 +34,7 @@ public class ProfilePanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public ProfilePanel(MainFrame pFrame) {
+	public ProfilePanel() {
 		setLayout(new GridLayout(0, 1, 0, 0));
 		JPanel cards = new JPanel(new CardLayout());
 		
@@ -202,22 +202,10 @@ public class ProfilePanel extends JPanel {
 		
 		//프로필 화면========================================================================================
 		JPanel profileMainPanel = new JPanel();
-		//add(profileMainPanel, "profileMainPanel");
-		 GridBagLayout Gbag = new GridBagLayout();
 		GridBagConstraints gbc= new GridBagConstraints();
-		profileMainPanel.setLayout(Gbag);
-		gbc.fill=GridBagConstraints.BOTH;
+		
 		profileMainPanel.setBackground(Color.WHITE);
-
-		JPanel profilePanel = new JPanel();
-		profilePanel.setLayout(null);
-		profilePanel.setBackground(Color.WHITE);
-
-		//id
-		JLabel idLabel = new JLabel("id");
-		idLabel.setFont(boldFont);
-		idLabel.setBounds(60, 10, 50, 15);
-		profilePanel.add(idLabel);
+		profileMainPanel.setBounds(0, 0, 350, 680);
 		
 		//프로필 이미지
 		ImageIcon ProfileImgIcon = null;
@@ -228,81 +216,11 @@ public class ProfilePanel extends JPanel {
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
-		JLabel profileImgLabel = new JLabel("");
-		profileImgLabel.setFont(defaultFont);
-		profileImgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		profileImgLabel.setBounds(60, 35, 70, 70);
-		profileImgLabel.setIcon(ProfileImgIcon);
-		profilePanel.add(profileImgLabel);
-		
-		//게시물 수
-		JLabel articleNumLabel = new JLabel("10");
-		articleNumLabel.setFont(boldFont);
-		articleNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		articleNumLabel.setBounds(170, 50, 50, 15);
-		profilePanel.add(articleNumLabel);
-		//게시물 라벨
-		JLabel articleLabel = new JLabel("게시물");
-		articleLabel.setFont(defaultFont);
-		articleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		articleLabel.setBounds(170, 75, 50, 15);
-		profilePanel.add(articleLabel);
-		
-		//팔로워 수
-		JLabel followerNumLabel = new JLabel("10");
-		followerNumLabel.setFont(boldFont);
-		followerNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followerNumLabel.setBounds(240, 50, 50, 15);
-		profilePanel.add(followerNumLabel);
-		//팔로워 라벨
-		JLabel followerLabel = new JLabel("팔로워");
-		followerLabel.setFont(defaultFont);
-		followerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followerLabel.setBounds(240, 75, 50, 15);
-		profilePanel.add(followerLabel);
-		
-		//팔로잉 수
-		JLabel followingNumLabel = new JLabel("10");
-		followingNumLabel.setFont(boldFont);
-		followingNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followingNumLabel.setBounds(310, 50, 50, 15);
-		profilePanel.add(followingNumLabel);
-		//팔로잉 라벨
-		JLabel followingLabel = new JLabel("팔로잉");
-		followingLabel.setFont(defaultFont);
-		followingLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		followingLabel.setBounds(310, 75, 50, 15);
-		profilePanel.add(followingLabel);
-		
-		//이름라벨
-		JLabel nameLabel2 = new JLabel("이름");
-		nameLabel2.setFont(defaultFont);
-		nameLabel2.setBounds(60, 115, 50, 15);
-		profilePanel.add(nameLabel2);
-		
-		//프로필 편집 버튼
-		JButton profileEditBtn = new JButton("프로필 편집");
-		profileEditBtn.setFont(defaultFont);
-		profileEditBtn.setBounds(267, 114, 100, 23);
-		profilePanel.add(profileEditBtn);
-		
-		gbc.weightx=0.1;
-		gbc.weighty=0.1;// 비율이 1:3이므로 버튼의 크기는 가로축으로 2배
-        gbc.gridx=0;  
-        gbc.gridy=0; 
-        Gbag.setConstraints(profilePanel, gbc);
-		profileMainPanel.add(profilePanel);
-		
-		
-		//scroll 안에 넣을 판넬
-		JPanel ArticleScrollItemPanel = new JPanel();
-		ArticleScrollItemPanel.setBackground(Color.WHITE);
-		ArticleScrollItemPanel.setLayout(new GridLayout(0,3));
 		
 		//임시 게시글 이미지--여긴 삭제하고 받아온 데이터 안에 이미지 사용할 것
 		ImageIcon articleImgIcon = null;
 		try {
-		    URL imageUrl = new URL("https://github.com/hyeonji91/database_team_project/assets/112065014/db0fbf09-d522-40ef-ad0b-7c802ecd455c");
+		    URL imageUrl = new URL("https://blog.kakaocdn.net/dn/0mySg/btqCUccOGVk/nQ68nZiNKoIEGNJkooELF1/img.jpg");
 		    articleImgIcon = new ImageIcon(imageUrl);
 		    articleImgIcon = utile.ImageIconResize.resizeImage(articleImgIcon, 133, 133);
 		} catch (Exception e) {
@@ -310,7 +228,7 @@ public class ProfilePanel extends JPanel {
 		}
 		
 		// 데이터를 담은 리스트[임시]
-	    struct[] articleData = new struct[15];
+	    struct[] articleData = new struct[9];
 	    for(int i=0;i<articleData.length;i++) {
 	    	articleData[i]=new struct();
 	    	articleData[i].set(0,"Kang","Context",123,"https://blog.kakaocdn.net/dn/0mySg/btqCUccOGVk/nQ68nZiNKoIEGNJkooELF1/img.jpg","./bin/image/user.png");
@@ -319,33 +237,23 @@ public class ProfilePanel extends JPanel {
         // 그 데이터로 만든 판넬 ArticleScrollItemPanel에 붙이기
         JLabel[] articles = new JLabel[articleData.length];
         
-
+      //scroll 안에 넣을 판넬
+		JPanel ArticleScrollItemPanel = new JPanel();
+		ArticleScrollItemPanel.setBackground(Color.WHITE);
+		ArticleScrollItemPanel.setLayout(new GridLayout(0,3,5,5));
         try {
-//            for (int i = 0; i < articleData.length; i++) {
-//            	articles[i] = new JLabel();
-//            	articles[i].setIcon(articleImgIcon);
-//            	ArticleScrollItemPanel.add(articles[i]);
-//            	
-//            	articles[i].addMouseListener(new MouseAdapter() {
-//        	        public void mouseClicked(MouseEvent e) {
-//        				System.out.println("clik articleImg");
-//        				new postPanel(articleData[i]);
-//        	        }
-//        		});
-//
-//            }
         	for (int i = 0; i < articleData.length; i++) {
         	    articles[i] = new JLabel();
         	    articles[i].setIcon(articleImgIcon);
         	    ArticleScrollItemPanel.add(articles[i]);
 
         	    int finalI = i;  // effectively final로 만들어주기 위해 새로운 변수에 할당
-
-            	articles[i].addMouseListener(new MouseAdapter() {
+        	    
+        	    articles[i].addMouseListener(new MouseAdapter() {
     	        public void mouseClicked(MouseEvent e) {
     				System.out.println("click articleImg");
-    				JPanel post = new PostPanel(articleData[finalI], pFrame);
-    				pFrame.change(post);
+    				JPanel post = new PostPanel(articleData[finalI]);
+    				new CreateFrameWithPanel(post);
     				System.out.println("click articleImg -> post!");
     	        }
     		});
@@ -353,19 +261,103 @@ public class ProfilePanel extends JPanel {
         } catch (Exception e2) {
             JOptionPane.showMessageDialog(null, e2);
         }
+				GridBagLayout gbl_profileMainPanel = new GridBagLayout();
+				gbl_profileMainPanel.columnWidths = new int[] {350};
+				gbl_profileMainPanel.rowHeights = new int[] {166, 166};
+				gbl_profileMainPanel.columnWeights = new double[]{1.0};
+				gbl_profileMainPanel.rowWeights = new double[]{0.0, 1.0};
+				profileMainPanel.setLayout(gbl_profileMainPanel);
+						
+						
+						
+						
+		JScrollPane scrollPane = new JScrollPane();
+		//		scrollPane.setBounds(0, 0, 360, 200);
+				scrollPane.setViewportView(ArticleScrollItemPanel);
+				scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+				scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+				GridBagConstraints gbc_scrollPane = new GridBagConstraints();
+				gbc_scrollPane.fill = GridBagConstraints.BOTH;
+				gbc_scrollPane.insets = new Insets(0, 0, 5, 5);
+				gbc_scrollPane.gridx = 0;
+				gbc_scrollPane.gridy = 1;
+				profileMainPanel.add(scrollPane, gbc_scrollPane);
 				
-		JScrollPane scrollPane = new JScrollPane(ArticleScrollItemPanel);
-		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		scrollPane.setBounds(0, 0, 360, 250);
-		gbc.weightx=0.1;
-		gbc.weighty=0.3;// 비율이 1:3이므로 버튼의 크기는 가로축으로 2배
-        gbc.gridx=0;  
-        gbc.gridy=1; 
-        gbc.gridwidth = 1;
-        Gbag.setConstraints(scrollPane, gbc);
-		profileMainPanel.add(scrollPane);
-		
+				
+						JPanel profilePanel = new JPanel();
+						profilePanel.setLayout(null);
+						profilePanel.setBackground(Color.WHITE);
+						//profilePanel.setBounds(0,0,350,250);
+						
+						//id
+						JLabel idLabel = new JLabel("id");
+						idLabel.setFont(boldFont);
+						idLabel.setBounds(60, 10, 50, 15);
+						profilePanel.add(idLabel);
+						JLabel profileImgLabel = new JLabel("");
+						profileImgLabel.setFont(defaultFont);
+						profileImgLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						profileImgLabel.setBounds(60, 35, 70, 70);
+						profileImgLabel.setIcon(ProfileImgIcon);
+						profilePanel.add(profileImgLabel);
+						
+						//게시물 수
+						JLabel articleNumLabel = new JLabel("10");
+						articleNumLabel.setFont(boldFont);
+						articleNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						articleNumLabel.setBounds(170, 50, 50, 15);
+						profilePanel.add(articleNumLabel);
+						//게시물 라벨
+						JLabel articleLabel = new JLabel("게시물");
+						articleLabel.setFont(defaultFont);
+						articleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						articleLabel.setBounds(170, 75, 50, 15);
+						profilePanel.add(articleLabel);
+						
+						//팔로워 수
+						JLabel followerNumLabel = new JLabel("10");
+						followerNumLabel.setFont(boldFont);
+						followerNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						followerNumLabel.setBounds(240, 50, 50, 15);
+						profilePanel.add(followerNumLabel);
+						//팔로워 라벨
+						JLabel followerLabel = new JLabel("팔로워");
+						followerLabel.setFont(defaultFont);
+						followerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						followerLabel.setBounds(240, 75, 50, 15);
+						profilePanel.add(followerLabel);
+						
+						//팔로잉 수
+						JLabel followingNumLabel = new JLabel("10");
+						followingNumLabel.setFont(boldFont);
+						followingNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						followingNumLabel.setBounds(310, 50, 50, 15);
+						profilePanel.add(followingNumLabel);
+						//팔로잉 라벨
+						JLabel followingLabel = new JLabel("팔로잉");
+						followingLabel.setFont(defaultFont);
+						followingLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						followingLabel.setBounds(310, 75, 50, 15);
+						profilePanel.add(followingLabel);
+						
+						//이름라벨
+						JLabel nameLabel2 = new JLabel("이름");
+						nameLabel2.setFont(defaultFont);
+						nameLabel2.setBounds(60, 115, 50, 15);
+						profilePanel.add(nameLabel2);
+						
+						//프로필 편집 버튼
+						JButton profileEditBtn = new JButton("프로필 편집");
+						profileEditBtn.setFont(defaultFont);
+						profileEditBtn.setBounds(267, 114, 100, 23);
+						profilePanel.add(profileEditBtn);
+						GridBagConstraints gbc_profilePanel = new GridBagConstraints();
+						gbc_profilePanel.fill = GridBagConstraints.BOTH;
+						gbc_profilePanel.gridx = 0;
+						gbc_profilePanel.gridy = 0;
+						profileMainPanel.add(profilePanel, gbc_profilePanel);
+						
+
 		
 		
 		
@@ -416,8 +408,9 @@ public class ProfilePanel extends JPanel {
 		JScrollPane followerScrollPane = new JScrollPane(followerScrollItemPanel);
 		followerScrollPane.setBackground(Color.WHITE);
 		GridBagConstraints gbc_followerScrollPane = new GridBagConstraints();
+		gbc_followerScrollPane.anchor = GridBagConstraints.NORTH;
 		gbc_followerScrollPane.gridwidth = 2;
-		gbc_followerScrollPane.fill = GridBagConstraints.BOTH;//꽉 채우기
+		gbc_followerScrollPane.fill = GridBagConstraints.HORIZONTAL;//꽉 채우기
 		gbc_followerScrollPane.gridx = 0;
 		gbc_followerScrollPane.gridy = 1;
 		followerPanel.add(followerScrollPane, gbc_followerScrollPane);
@@ -465,8 +458,9 @@ public class ProfilePanel extends JPanel {
 		JScrollPane followingScrollPane = new JScrollPane(followingScrollItemPanel);
 		followingScrollPane.setBackground(Color.WHITE);
 		GridBagConstraints gbc_followingScrollPane = new GridBagConstraints();
+		gbc_followingScrollPane.anchor = GridBagConstraints.NORTH;
 		gbc_followingScrollPane.gridwidth = 2;
-		gbc_followingScrollPane.fill = GridBagConstraints.BOTH;
+		gbc_followingScrollPane.fill = GridBagConstraints.HORIZONTAL;
 		gbc_followingScrollPane.gridx = 0;
 		gbc_followingScrollPane.gridy = 1;
 		followingPanel.add(followingScrollPane, gbc_followingScrollPane);
@@ -475,11 +469,11 @@ public class ProfilePanel extends JPanel {
 
 		
 		// CardLayout에 패널들 추가
+
 		cards.add(profileMainPanel, "profileMainPanel");
-		
 		cards.add(editProfilePanel, "editProfilePanel");
+
 		cards.add(followerPanel, "followerPanel");
-		
 		cards.add(followingPanel, "followingPanel");
 		
 		
@@ -501,18 +495,16 @@ public class ProfilePanel extends JPanel {
 		});
 		//[profileMainPanel] 팔로워 수 라벨 클릭
 		followerNumLabel.addMouseListener(new MouseAdapter() {
-	        public void mouseClicked(MouseEvent e) {
+public void mouseClicked(MouseEvent e) {
 				cl.show(cards, "followerPanel");
-	        }
+}
 		});
 		//[profileMainPanel] 팔로잉 수 라벨 클릭 
 		followingNumLabel.addMouseListener(new MouseAdapter() {
-	        public void mouseClicked(MouseEvent e) {
+public void mouseClicked(MouseEvent e) {
 				cl.show(cards, "followingPanel");
-	        }
+}
 		});
-		
-		
 		//[editProfilePanel] 취소 버튼 클릭
 		exitBtn.addActionListener(new ActionListener() {
 			@Override
@@ -547,23 +539,15 @@ public class ProfilePanel extends JPanel {
 	
 
 	// 테스트를 위한 더미 데이터 생성
-    private List<String> getData() {
+    public static List<String> getData() {
         List<String> data = new ArrayList<>();
         data.add("Data 1");
         data.add("Data 2");
         data.add("Data 3");
         data.add("Data 4");
         data.add("Data 5");
-        data.add("Data 6");
-        data.add("Data 7");
-        data.add("Data 8");
-        data.add("Data 9");
-        data.add("Data 10");
-        data.add("Data 11");
-        data.add("Data 12");
-        data.add("Data 13");
-        data.add("Data 14");
-        data.add("Data 15");
+
+
         return data;
     }
 }

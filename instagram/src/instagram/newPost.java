@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 class newPost{
-	newPost(MainFrame pFrame, String address){
+	newPost(String address){
 		JFrame frame = new JFrame("Instagram");
 		frame.setSize(450, 700);
 		frame.setLayout(new BorderLayout());
@@ -42,7 +42,7 @@ class newPost{
 	    
 	    logoLabel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new post(pFrame);
+				new post();
 				frame.setVisible(false);
 			}
 		});
@@ -86,7 +86,7 @@ class newPost{
 	    URLtf.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String newaddress=URLtf.getText();
-				new newPost(pFrame, newaddress);
+				new newPost(newaddress);
 				frame.setVisible(false);
 			}
 		});
@@ -118,7 +118,7 @@ class newPost{
 	    
 	    commit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new post(pFrame);
+				new post();
 				String commnet=commenttf.getText();
 				String url = address;
 				//Query

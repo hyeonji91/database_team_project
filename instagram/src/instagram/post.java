@@ -43,7 +43,7 @@ class struct{
 
 class post extends JPanel{
 	
-	post(MainFrame pFrame){
+	post(){
 		
 //		JFrame frame = new JFrame("Instagram");
 		this.setSize(450, 700);
@@ -64,7 +64,7 @@ class post extends JPanel{
 	    logoLabel.setBackground(Color.WHITE);
 	    logoLabel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new post(pFrame);
+				new post();
 				setVisible(false);//원래 frame
 			}
 		});
@@ -79,7 +79,7 @@ class post extends JPanel{
 	    CameraLabel.setBorderPainted(false);
 	    CameraLabel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new newPost(pFrame, "https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDNfMjk0/MDAxNTk5MTI1ODQzMTAy.vvvvkfj2ujzZx1TXfyHk6lcXsyWuptP1OcRUXfUnYUcg.tUDit1T4ppM07McaG4-8g1Uc3TRSOeQwGhQ79bRtjqkg.PNG.shshspdla/16%EB%8C%8010.png?type=w800");
+				new newPost("https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDNfMjk0/MDAxNTk5MTI1ODQzMTAy.vvvvkfj2ujzZx1TXfyHk6lcXsyWuptP1OcRUXfUnYUcg.tUDit1T4ppM07McaG4-8g1Uc3TRSOeQwGhQ79bRtjqkg.PNG.shshspdla/16%EB%8C%8010.png?type=w800");
 				setVisible(false);//원래 frame
 			}
 		});
@@ -106,7 +106,7 @@ class post extends JPanel{
 	    // Create and add the post panels
 	    for (int i = 0; i < list.length; i++) {
 	        // Create the post panel
-	        JPanel postPanel = new PostPanel(list[i], pFrame);
+	        JPanel postPanel = new PostPanel(list[i]);
 	        centerPanel.add(postPanel);
 	    }
 		 // Create a JScrollPane and add the center panel to it

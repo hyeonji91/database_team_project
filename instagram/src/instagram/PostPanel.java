@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 public class PostPanel extends JPanel{
 	
-	PostPanel(struct list, MainFrame pFrame){
+	PostPanel(struct list){
 //		JPanel this = new JPanel();
         this.setPreferredSize(new Dimension(300, 550));
         this.setBorder(BorderFactory.createLineBorder(Color.lightGray, 1));
@@ -49,8 +49,8 @@ public class PostPanel extends JPanel{
         UserName.addMouseListener(new MouseAdapter() {
 	        public void mouseClicked(MouseEvent e) {
 	        	System.out.println("click userName");
-				JPanel profilePanel = new ProfilePanel(pFrame);
-				pFrame.change(profilePanel);
+				JPanel profilePanel = new ProfilePanel();
+				new CreateFrameWithPanel(profilePanel);
 				System.out.println("click userName -> profile!");
 	        }
 		});
@@ -112,7 +112,7 @@ public class PostPanel extends JPanel{
 	    //댓글창 열기
 	    commentLabel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Comment(pFrame);
+				new Comment();
 			}
 		});
 	    

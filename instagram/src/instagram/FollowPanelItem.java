@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.net.URL;
 
 import javax.swing.ImageIcon;
@@ -68,6 +70,16 @@ public class FollowPanelItem extends JPanel {
 		gbc_followNameLabel.gridx = 1;
 		gbc_followNameLabel.gridy = 1;
 		this.add(followNameLabel, gbc_followNameLabel);
+		
+		//누르면 프로필 화면으로 전환
+		this.addMouseListener(new MouseAdapter() {
+	        public void mouseClicked(MouseEvent e) {
+	        	System.out.println("click profile");
+
+	    	    JPanel profilePanel = new ProfilePanel();
+				new CreateFrameWithPanel(profilePanel);
+	        }
+		});
 		
 	}
 	

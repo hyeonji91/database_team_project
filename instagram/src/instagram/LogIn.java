@@ -33,17 +33,6 @@ public class LogIn extends JPanel{
         btnTogglePassword = new JButton("비밀번호 표시");
         
         //Size Control
-//        btnTogglePassword.setBounds(245, 215, 100, 15);//x,y,width,height
-//        lblIntro.setBounds(150, 40, 200, 50);
-//        lblID.setBounds(50, 100, 50, 40); // Adjusted position for ID label
-//        txtID.setBounds(100, 100, 250, 40); // Added txtID position
-//        IPassword.setBounds(30, 170, 60, 45);
-//        txtPass.setBounds(100, 170, 250, 40); 
-//        btnLogin.setBounds(125, 250, 150, 40);
-//        lblregister.setBounds(110, 300, 210, 18);
-//        IText.setBounds(85,320,250,20);
-//        btnRegister.setBounds(125, 365, 150, 40);
-//        lblAsGuest.setBounds(135, 415, 150, 12);
         btnTogglePassword.setBounds(270, 215, 100, 15);//x,y,width,height
         lblIntro.setBounds(175, 40, 200, 50);
         lblID.setBounds(75, 100, 50, 40); // Adjusted position for ID label
