@@ -122,7 +122,7 @@ class post extends JPanel{
 	    this.setLocation(500, 150);
 
 	}
-//	public static void main(String args[]) throws IOException {
-//        new post();
-//    }
+	public static void main(String args[]) throws IOException {
+        new post();
+    }
 }

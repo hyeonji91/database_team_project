@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.*;
 
 public class ProfilePanel extends JPanel {
@@ -24,7 +26,6 @@ public class ProfilePanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField nameTF;
-	private JTextField idTF;
 	private JPasswordField pwdPF;
 	private JTextField birthTF;
 	private JTextField genderTF;
@@ -78,29 +79,84 @@ public class ProfilePanel extends JPanel {
 		editImgBtn.setBounds(177, 147, 93, 23);
 		editProfilePanel.add(editImgBtn);
 		
-		
+		//여기 수정==============================================================
 		editImgBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFileChooser fileChooser = new JFileChooser("c:\\");
-				int returnVal = fileChooser.showOpenDialog(getParent());
-	            
-				// 창 열기 정상 수행시 0 반환, 취소시 1 반환
-				if(returnVal == JFileChooser.APPROVE_OPTION) {
-					//파일 경로 가져오기
-					imagePath = fileChooser.getSelectedFile().getPath();
-					
-					//프로필 이미지 세팅
-					ImageIcon editProfileImgicon = null;
-					try {
-					    editProfileImgicon = new ImageIcon(imagePath);
-					    editProfileImgicon = utile.ImageIconResize.resizeImage(editProfileImgicon, 80, 80);//resize
-					} catch (Exception e2) {
-					    e2.printStackTrace();
+				JFrame imgFrame = new JFrame("instagram");
+				ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
+				imgFrame.setIconImage(icon.getImage());
+				imgFrame.setSize(450, 700);
+				imgFrame.setLocationRelativeTo(null);//화면 중앙에 배치
+				imgFrame.setResizable(false);
+		    	imgFrame.setLayout(new GridLayout(0, 1));
+				
+				JPanel imgPanel = new JPanel();
+				imgPanel.setLayout(null);
+				
+				//url입력
+				JLabel URL = new JLabel("URL :  ");
+				URL.setBounds(25, 200, 40, 40);
+				//url입력 textfield
+			    JTextField URLtf = new JTextField();
+			    URLtf.setBounds(65, 200, 350, 40);
+
+			    imgPanel.add(URL);
+			    imgPanel.add(URLtf);
+
+			    //이미지 등록 버튼
+			    JButton commit = new JButton("commit");
+			    commit.setPreferredSize(new Dimension(400,40));
+			    commit.setBounds(25, 260, 400, 40);
+
+			    commit.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						//url가져오기
+						String url = URLtf.getText();
+						System.out.println("url : "+url);
+						
+						
+						//프로필 이미지 세팅
+						ImageIcon editProfileImgicon = null;
+						try {
+						    URL imageUrl = new URL(url);
+						    editProfileImgicon = new ImageIcon(imageUrl);
+						    editProfileImgicon = utile.ImageIconResize.resizeImage(editProfileImgicon, 80, 80);//resize
+						} catch (Exception e2) {
+						    e2.printStackTrace();
+						}
+						ImgLabel.setIcon(editProfileImgicon);
+						//editProfilePanel다시그리기
+						editProfilePanel.repaint();
+						imgFrame.setVisible(false);
 					}
-					ImgLabel.setIcon(editProfileImgicon);
-					
-				}
+				} );
+			    imgPanel.add(commit);
+			    
+			    imgFrame.add(imgPanel);
+				imgFrame.setVisible(true);
+			    
+
+			    ;
+//				JFileChooser fileChooser = new JFileChooser("c:\\");
+//				int returnVal = fileChooser.showOpenDialog(getParent());
+//	            
+//				// 창 열기 정상 수행시 0 반환, 취소시 1 반환
+//				if(returnVal == JFileChooser.APPROVE_OPTION) {
+//					//파일 경로 가져오기
+//					imagePath = fileChooser.getSelectedFile().getPath();
+//					
+//					//프로필 이미지 세팅
+//					ImageIcon editProfileImgicon = null;
+//					try {
+//					    editProfileImgicon = new ImageIcon(imagePath);
+//					    editProfileImgicon = utile.ImageIconResize.resizeImage(editProfileImgicon, 80, 80);//resize
+//					} catch (Exception e2) {
+//					    e2.printStackTrace();
+//					}
+//					ImgLabel.setIcon(editProfileImgicon);
+//					
+//				}
 			}
 		});
 		
@@ -118,81 +174,71 @@ public class ProfilePanel extends JPanel {
 		editProfilePanel.add(nameTF);
 		nameTF.setColumns(10);
 		
-		//아이디 수정
-		JLabel idEditLabel = new JLabel("아이디");
-		idEditLabel.setFont(defaultFont);
-		idEditLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		idEditLabel.setBounds(60, 220, 50, 15);
-		editProfilePanel.add(idEditLabel);
-		//아이디 수정 textField
-		idTF = new JTextField();
-		idTF.setFont(defaultFont);
-		idTF.setColumns(10);
-		idTF.setBounds(120, 217, 270, 21);
-		editProfilePanel.add(idTF);
+		//id수정 제거	==============================================================
+
 		
 		//비밀번호 수정
 		JLabel pwdLabel = new JLabel("비밀번호");
 		pwdLabel.setFont(defaultFont);
 		pwdLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		pwdLabel.setBounds(60, 250, 50, 15);
+		pwdLabel.setBounds(60, 220, 50, 15);
 		editProfilePanel.add(pwdLabel);
 		//비밀번호 수정 passwordField
 		pwdPF = new JPasswordField();
 		pwdPF.setFont(defaultFont);
-		pwdPF.setBounds(120, 247, 270, 21);
+		pwdPF.setBounds(120, 217, 270, 21);
 		editProfilePanel.add(pwdPF);
 		
 		//생일 수정
 		JLabel birthLabel = new JLabel("생일");
 		birthLabel.setFont(defaultFont);
 		birthLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		birthLabel.setBounds(60, 280, 50, 15);
+		birthLabel.setBounds(60, 250, 50, 15);
 		editProfilePanel.add(birthLabel);
 		//생일 수정 passwordField
 		birthTF = new JTextField();
 		birthTF.setFont(defaultFont);
 		birthTF.setColumns(10);
-		birthTF.setBounds(120, 277, 270, 21);
+		birthTF.setBounds(120, 247, 270, 21);
 		editProfilePanel.add(birthTF);
 		
 		//성별 수정
 		JLabel genderLabel = new JLabel("성별");
 		genderLabel.setFont(defaultFont);
 		genderLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		genderLabel.setBounds(60, 310, 50, 15);
+		genderLabel.setBounds(60, 280, 50, 15);
 		editProfilePanel.add(genderLabel);
 		//성별 수정 passwordField
 		genderTF = new JTextField();
 		genderTF.setFont(defaultFont);
 		genderTF.setColumns(10);
-		genderTF.setBounds(120, 307, 270, 21);
+		genderTF.setBounds(120, 270, 270, 21);
 		editProfilePanel.add(genderTF);
 		
 		//핸드폰 번호 수정
 		JLabel phoneLabel = new JLabel("phone");
 		phoneLabel.setFont(defaultFont);
 		phoneLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		phoneLabel.setBounds(60, 340, 50, 15);
+		phoneLabel.setBounds(60, 310, 50, 15);
 		editProfilePanel.add(phoneLabel);
 		//핸드폰 번호 수정 passwordField
 		phoneTF = new JTextField();
 		phoneTF.setFont(defaultFont);
 		phoneTF.setColumns(10);
-		phoneTF.setBounds(120, 337, 270, 21);
+		phoneTF.setBounds(120, 307, 270, 21);
 		editProfilePanel.add(phoneTF);
 		
 		//주소 수정
 		JLabel addressLabel = new JLabel("주소");
 		addressLabel.setFont(defaultFont);
 		addressLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		addressLabel.setBounds(60, 370, 50, 15);
+		addressLabel.setBounds(60, 340, 50, 15);
 		editProfilePanel.add(addressLabel);
 		//주소 수정 passwordField
 		addressTF = new JTextField();
 		addressTF.setFont(defaultFont);
 		addressTF.setColumns(10);
-		addressTF.setBounds(120, 367, 270, 43);
+		addressTF.setBounds(120, 337, 270, 43);
 		editProfilePanel.add(addressTF);
 		//add(followingPanel, "FollowingPanel");
 		

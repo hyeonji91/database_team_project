@@ -2,6 +2,7 @@ package instagram;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -133,5 +134,6 @@ class newPost{
 	    frame.setVisible(true);
 	    frame.setLocationRelativeTo(null);//화면 중앙에 배치
 	}	
+	
 }
 
