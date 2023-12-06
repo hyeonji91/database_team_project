@@ -49,7 +49,9 @@ public class PostPanel extends JPanel{
        
         //글의 유저 이름
         String username =list.getUsername();
-        JLabel UserName = new JLabel("  "+username);
+       // JLabel UserName = new JLabel("  "+username);
+        JLabel UserName = new JLabel("  "+ user_id);
+
         UserName.setFont(new Font("Arial",Font.BOLD, 14));
 	    
         UserName.addMouseListener(new MouseAdapter() {
