@@ -341,6 +341,68 @@ public class SQL {
 		
 		return result;
 	}
+	
+	public Boolean isFollower(String User_id, String my_user_id) {
+		ArrayList<String> list = new ArrayList<>();
+		int i=0;
+		
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = "SELECT distinct follower_id from follow where following_id = \""+User_id+"\"";
+		try {
+			stmt=con.createStatement();
+			rs=stmt.executeQuery(query);
+			
+			while(rs.next()) {
+				if(!rs.wasNull()) {
+					list.add(rs.getString(1));
+					i++;
+				}
+			}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		String[] result = new String[i];
+		for(int j=0;j<result.length;j++) {
+			result[j]=new String();
+			result[j]=list.get(j);
+			System.out.println(result[j]);
+		}
+		
+		Boolean isFollow = false;
+		for(int j=0;j<result.length;j++) {
+			if(result[j].equals( my_user_id))
+				isFollow = true;
+		}
+		
+		try {
+			if(stmt !=null&& !stmt.isClosed())stmt.close();
+			if(rs !=null && !rs.isClosed())rs.close();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return isFollow;
+	}
+	
+	public void addFollow (String following_id, String follower_id){
+	
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = "INSERT INTO follow VALUES (\""+following_id+"\", \""+follower_id+"\")";
+		try {
+			stmt=con.createStatement();
+			stmt.execute(query);
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 
 	//Done
 	public String[] getUser_Id() {

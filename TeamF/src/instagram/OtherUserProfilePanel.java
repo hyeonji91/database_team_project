@@ -190,14 +190,22 @@ public class OtherUserProfilePanel extends JPanel {
 						//이름라벨
 						JLabel nameLabel2 = new JLabel(user.getName());
 						nameLabel2.setFont(defaultFont);
-						nameLabel2.setBounds(60, 115, 50, 15);
+						nameLabel2.setBounds(60, 115, 150, 15);
 						profilePanel.add(nameLabel2);
 						
-						//프로필 편집 버튼
+						//팔로우 버튼
+				
+						
 						JButton followBtn = new JButton("팔로우");
 						followBtn.setFont(defaultFont);
 						followBtn.setBounds(267, 114, 100, 23);
-						followBtn.setBackground(new Color(0x81BEF7));
+						Boolean isFollower = false;
+						if(sql.isFollower(user_id, MainFrame.my_user_id)) {
+							followBtn.setBackground(Color.WHITE);
+							isFollower=true;
+						}
+						else
+							followBtn.setBackground(new Color(0x81BEF7));
 						profilePanel.add(followBtn);
 						GridBagConstraints gbc_profilePanel = new GridBagConstraints();
 						gbc_profilePanel.fill = GridBagConstraints.BOTH;
@@ -336,11 +344,31 @@ public class OtherUserProfilePanel extends JPanel {
 		CardLayout cl = (CardLayout) cards.getLayout();
 		
 		//[profileMainPanel] 팔로우 버튼 클릭 
+		final Boolean temp = isFollower;
 		followBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//cl.show(cards, "editProfilePanel");
-				followBtn.setBackground(Color.WHITE);
+				if(temp) {
+					//followBtn.setBackground(new Color(0x81BEF7));
+				}
+				else {
+					followBtn.setBackground(Color.WHITE);
+					sql.addFollow(user_id, MainFrame.my_user_id);
+					int count = follower.length + 1;
+					followerNumLabel.setText(""+ count);
+					
+					//판넬 다시그리기
+					followerScrollItemPanel.removeAll();
+			        String[] followingData = getData(user_id, 1);// 데이터를 담은 리스트[임시]
+			        // 그 데이터 만든 판넬 followerScrollItemPanel에 붙이기
+			        for(int i=0;i<followingData.length;i++) {
+			        	followerScrollItemPanel.add(new FollowPanelItem(followingData[i]));
+			        }
+			        followerScrollItemPanel.repaint();
+					
+				}
+				
 			}
 		});
 		//[profileMainPanel] 팔로워 수 라벨 클릭

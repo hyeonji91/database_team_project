@@ -390,7 +390,7 @@ public class ProfilePanel extends JPanel {
 						//이름라벨
 						JLabel nameLabel2 = new JLabel(user.getName());
 						nameLabel2.setFont(defaultFont);
-						nameLabel2.setBounds(60, 115, 50, 15);
+						nameLabel2.setBounds(60, 115, 150, 15);
 						profilePanel.add(nameLabel2);
 						
 						//프로필 편집 버튼

@@ -21,8 +21,11 @@ public class MainFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	public static String my_user_id;
 
 	public MainFrame(String user_id) {
+		my_user_id = user_id;
+		
 		setTitle("instagram");//프레임 제목 설정
 		ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
         setIconImage(icon.getImage());

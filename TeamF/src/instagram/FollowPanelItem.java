@@ -37,6 +37,7 @@ public class FollowPanelItem extends JPanel {
 		SQL sql = new SQL();
 		String URL = sql.getProfileImg(user_id);
 		String name = sql.getUser(user_id).getName();
+		String id = sql.getUser(user_id).getUser_id();
 		String nickname = sql.getNickname(user_id);
 		
 		ImageIcon profileImgicon = null;
@@ -59,7 +60,7 @@ public class FollowPanelItem extends JPanel {
 		gbc_followProfileImg.gridy = 0;
 		this.add(followProfileImg, gbc_followProfileImg);
 		
-		JLabel followIdLabel = new JLabel(nickname);
+		JLabel followIdLabel = new JLabel(id);
 		followIdLabel.setFont(new Font("맑은 고딕", Font.BOLD, 12));
 		GridBagConstraints gbc_followIdLabel = new GridBagConstraints();
 		gbc_followIdLabel.anchor = GridBagConstraints.WEST;
@@ -82,7 +83,7 @@ public class FollowPanelItem extends JPanel {
 	        public void mouseClicked(MouseEvent e) {
 	        	System.out.println("click profile");
 
-	    	    JPanel profilePanel = new ProfilePanel(user_id);
+	    	    JPanel profilePanel = new OtherUserProfilePanel(user_id);
 				new CreateFrameWithPanel(profilePanel);
 	        }
 		});
