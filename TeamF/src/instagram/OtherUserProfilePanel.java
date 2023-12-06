@@ -22,7 +22,7 @@ import javax.swing.border.LineBorder;
 
 import utile.*;
 
-public class ProfilePanel extends JPanel {
+public class OtherUserProfilePanel extends JPanel {
 	private static SQL sql = new SQL();
 	public static final Font defaultFont = new Font("맑은 고딕", Font.PLAIN, 12);
 	public static final Font boldFont = new Font("맑은 고딕", Font.BOLD, 12);
@@ -40,7 +40,7 @@ public class ProfilePanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public ProfilePanel(String user_id) {
+	public OtherUserProfilePanel(String user_id) {
 		String[] following = sql.findFollowing(user_id);
 		String[] follower = sql.findFollower(user_id);
 		UserStruct user = sql.getUser(user_id);
@@ -50,207 +50,7 @@ public class ProfilePanel extends JPanel {
 		JPanel cards = new JPanel(new CardLayout());
 		
 		
-		//프로필 수정 화면
-		JPanel editProfilePanel = new JPanel();
-		editProfilePanel.setLayout(null);//AbsoluteLayout : 배치관리자가 없는 컨테이너로 설정
-		editProfilePanel.setBackground(Color.WHITE);
-		
-		//수정 확인 버튼
-		JButton editBtn = new JButton("확인");
-		editBtn.setBounds(330, 10, 60, 23);
-		editBtn.setFont(defaultFont);
-		editProfilePanel.add(editBtn);
-		
-		//취소 버튼 (나가기)
-		JButton exitBtn = new JButton("취소");
-		exitBtn.setBounds(60, 10, 60, 23);
-		exitBtn.setFont(defaultFont);
-		editProfilePanel.add(exitBtn);
-		
-		//프로필 이미지 세팅
-		ImageIcon editProfileImgicon = null;
-		try {
-		    URL imageUrl = new URL("https://github.com/hyeonji91/database_team_project/assets/112065014/db0fbf09-d522-40ef-ad0b-7c802ecd455c");
-		    editProfileImgicon = new ImageIcon(imageUrl);
-		    editProfileImgicon = utile.ImageIconResize.resizeImage(editProfileImgicon, 80, 80);//resize
-		} catch (Exception e) {
-		    e.printStackTrace();
-		}
-		JLabel ImgLabel = new JLabel("");
-		ImgLabel.setBackground(new Color(255, 255, 255));
-		ImgLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		ImgLabel.setIcon(editProfileImgicon);
-		ImgLabel.setBounds(185, 57, 80, 80);
-		editProfilePanel.add(ImgLabel);
-		
-		//프로필 이미지 수정 버튼
-		JButton editImgBtn = new JButton("사진 수정");
-		editImgBtn.setFont(defaultFont);
-		editImgBtn.setBounds(177, 147, 93, 23);
-		editProfilePanel.add(editImgBtn);
-		
-		
-		editImgBtn.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JFrame imgFrame = new JFrame("instagram");
-				ImageIcon icon = new ImageIcon("./bin/image/logo.png");	    
-				imgFrame.setIconImage(icon.getImage());
-				imgFrame.setSize(450, 700);
-				imgFrame.setLocationRelativeTo(null);//화면 중앙에 배치
-				imgFrame.setResizable(false);
-		    	imgFrame.setLayout(new GridLayout(0, 1));
-				
-				JPanel imgPanel = new JPanel();
-				imgPanel.setLayout(null);
-				
-				//url입력
-				JLabel URL = new JLabel("URL :  ");
-				URL.setBounds(25, 200, 40, 40);
-				//url입력 textfield
-			    JTextField URLtf = new JTextField();
-			    URLtf.setBounds(65, 200, 350, 40);
-
-			    imgPanel.add(URL);
-			    imgPanel.add(URLtf);
-
-			    //이미지 등록 버튼
-			    JButton commit = new JButton("commit");
-			    commit.setPreferredSize(new Dimension(400,40));
-			    commit.setBounds(25, 260, 400, 40);
-
-			    commit.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						//url가져오기
-						String url = URLtf.getText();
-						System.out.println("url : "+url);
-						
-						
-						//프로필 이미지 세팅
-						ImageIcon editProfileImgicon = null;
-						try {
-						    URL imageUrl = new URL(url);
-						    editProfileImgicon = new ImageIcon(imageUrl);
-						    editProfileImgicon = utile.ImageIconResize.resizeImage(editProfileImgicon, 80, 80);//resize
-						} catch (Exception e2) {
-						    e2.printStackTrace();
-						}
-						ImgLabel.setIcon(editProfileImgicon);
-						//editProfilePanel다시그리기
-						editProfilePanel.repaint();
-						sql.changeProfileImg(url, user_id);
-						
-						imgFrame.setVisible(false);
-					}
-				} );
-			    imgPanel.add(commit);
-			    
-			    imgFrame.add(imgPanel);
-				imgFrame.setVisible(true);
-			}
-		});
-		
-		
-		//이름 수정
-		JLabel nameLabel = new JLabel("이름");
-		nameLabel.setFont(defaultFont);
-		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		nameLabel.setBounds(60, 190, 50, 15);
-		editProfilePanel.add(nameLabel);
-		//이름 수정 textField
-		nameTF = new JTextField();
-		nameTF.setFont(defaultFont);
-		nameTF.setBounds(120, 187, 270, 21);
-		editProfilePanel.add(nameTF);
-		nameTF.setColumns(10);
-		
-		//비밀번호 수정
-		JLabel pwdLabel = new JLabel("비밀번호");
-		pwdLabel.setFont(defaultFont);
-		pwdLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		pwdLabel.setBounds(60, 220, 50, 15);
-		editProfilePanel.add(pwdLabel);
-		//비밀번호 수정 passwordField
-		pwdPF = new JPasswordField();
-		pwdPF.setFont(defaultFont);
-		pwdPF.setBounds(120, 217, 270, 21);
-		editProfilePanel.add(pwdPF);
-		
-		//생일 수정
-		JLabel birthLabel = new JLabel("생일");
-		birthLabel.setFont(defaultFont);
-		birthLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		birthLabel.setBounds(60, 250, 50, 15);
-		editProfilePanel.add(birthLabel);
-		//생일 수정 passwordField
-		birthTF = new JTextField();
-		birthTF.setFont(defaultFont);
-		birthTF.setColumns(10);
-		birthTF.setBounds(120, 247, 270, 21);
-		editProfilePanel.add(birthTF);
-		
-		//성별 수정
-		JLabel genderLabel = new JLabel("성별");
-		genderLabel.setFont(defaultFont);
-		genderLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		genderLabel.setBounds(60, 280, 50, 15);
-		editProfilePanel.add(genderLabel);
-		//성별 수정 passwordField
-		genderTF = new JTextField();
-		genderTF.setFont(defaultFont);
-		genderTF.setColumns(10);
-		genderTF.setBounds(120, 277, 270, 21);
-		editProfilePanel.add(genderTF);
-		
-		//핸드폰 번호 수정
-		JLabel phoneLabel = new JLabel("phone");
-		phoneLabel.setFont(defaultFont);
-		phoneLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		phoneLabel.setBounds(60, 310, 50, 15);
-		editProfilePanel.add(phoneLabel);
-		//핸드폰 번호 수정 passwordField
-		phoneTF = new JTextField();
-		phoneTF.setFont(defaultFont);
-		phoneTF.setColumns(10);
-		phoneTF.setBounds(120, 307, 270, 21);
-		editProfilePanel.add(phoneTF);
-		
-		//주소 수정
-		JLabel addressLabel = new JLabel("주소");
-		addressLabel.setFont(defaultFont);
-		addressLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		addressLabel.setBounds(60, 340, 50, 15);
-		editProfilePanel.add(addressLabel);
-		//주소 수정 passwordField
-		addressTF = new JTextField();
-		addressTF.setFont(defaultFont);
-		addressTF.setColumns(10);
-		addressTF.setBounds(120, 337, 270, 43);
-		editProfilePanel.add(addressTF);
-		//add(followingPanel, "FollowingPanel");
-		
-		//Event
-		editBtn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String name = nameTF.getText();
-				String password = pwdPF.getText();
-				String birth = birthTF.getText();
-				String gender = genderTF.getText();
-				String phone = phoneTF.getText();
-				String address = addressTF.getText();
-				
-				if (name =="") name = user.getName();
-				if (password=="") password = user.getPassword();
-				if(birth=="")birth=user.getBirth();
-				if(gender=="")gender=user.getGender();
-				if(phone=="")phone=user.getPhone_number();
-				if(address=="")address=user.getAddress();
-				
-				UserStruct temp = new UserStruct(user_id,name,password,birth,gender,phone,address);
-				sql.changeUser(temp);
-			}
-		});
-		
+	
 		
 		
 		//프로필 화면========================================================================================
@@ -394,10 +194,11 @@ public class ProfilePanel extends JPanel {
 						profilePanel.add(nameLabel2);
 						
 						//프로필 편집 버튼
-						JButton profileEditBtn = new JButton("프로필 편집");
-						profileEditBtn.setFont(defaultFont);
-						profileEditBtn.setBounds(267, 114, 100, 23);
-						profilePanel.add(profileEditBtn);
+						JButton followBtn = new JButton("팔로우");
+						followBtn.setFont(defaultFont);
+						followBtn.setBounds(267, 114, 100, 23);
+						followBtn.setBackground(new Color(0x81BEF7));
+						profilePanel.add(followBtn);
 						GridBagConstraints gbc_profilePanel = new GridBagConstraints();
 						gbc_profilePanel.fill = GridBagConstraints.BOTH;
 						gbc_profilePanel.gridx = 0;
@@ -521,8 +322,6 @@ public class ProfilePanel extends JPanel {
 		// CardLayout에 패널들 추가
 
 		cards.add(profileMainPanel, "profileMainPanel");
-		cards.add(editProfilePanel, "editProfilePanel");
-
 		cards.add(followerPanel, "followerPanel");
 		cards.add(followingPanel, "followingPanel");
 		
@@ -536,11 +335,12 @@ public class ProfilePanel extends JPanel {
 		// 화면 레이아웃 가져오기
 		CardLayout cl = (CardLayout) cards.getLayout();
 		
-		//[profileMainPanel] 프로필 편집 버튼 클릭 
-		profileEditBtn.addActionListener(new ActionListener() {
+		//[profileMainPanel] 팔로우 버튼 클릭 
+		followBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cl.show(cards, "editProfilePanel");
+				//cl.show(cards, "editProfilePanel");
+				followBtn.setBackground(Color.WHITE);
 			}
 		});
 		//[profileMainPanel] 팔로워 수 라벨 클릭
@@ -553,20 +353,6 @@ public class ProfilePanel extends JPanel {
 		followingNumLabel.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				cl.show(cards, "followingPanel");
-			}
-		});
-		//[editProfilePanel] 취소 버튼 클릭
-		exitBtn.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				cl.show(cards, "profileMainPanel");
-			}
-		});
-		//[editProfilePanel] 수정 확인 버튼 클릭
-		editBtn.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				cl.show(cards, "profileMainPanel");
 			}
 		});
 		

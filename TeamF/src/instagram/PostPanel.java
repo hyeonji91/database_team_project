@@ -55,7 +55,7 @@ public class PostPanel extends JPanel{
         UserName.addMouseListener(new MouseAdapter() {
 	        public void mouseClicked(MouseEvent e) {
 	        	System.out.println("click userName");
-				JPanel profilePanel = new ProfilePanel(sql.nameToID(username));
+				JPanel profilePanel = new OtherUserProfilePanel(sql.nameToID(username));
 				new CreateFrameWithPanel(profilePanel);
 				System.out.println("click userName -> profile!");
 	        }

@@ -70,7 +70,7 @@ public class LogIn extends JFrame{
         	public void actionPerformed(ActionEvent e) {
         		if(sql.checkPassword(txtID.getText(),txtPass.getText())) {
         		    JOptionPane.showMessageDialog(null, "You have logged in sucessfully");
-        			setVisible(false);
+        		    setVisible(false);
         		    new MainFrame(txtID.getText());
         		}
         		else {

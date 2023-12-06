@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.sql.*;
 import java.util.*;
 
+
 import com.mysql.cj.protocol.Resultset;
 import com.mysql.cj.xdevapi.Result;
 
@@ -13,7 +14,7 @@ public class SQL {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url = "jdbc:mysql://localhost/instagram";
-	        String user = "root", passwd = "0429";
+	        String user = "root", passwd = "12345";//0429
 	        con = DriverManager.getConnection(url, user, passwd);
 	        System.out.println(con);
 		}
